@@ -80,7 +80,7 @@
         .dropdown{
             display : inline-block;
         }
-        .dropdown-content{
+        .sidebar-div{
             display: flex;
             align-items: center;
             text-align: center;
@@ -88,7 +88,7 @@
             position : absolute;
             z-index : 1;
         }
-        .dropdown-content a{
+        .sidebar-div a{
             text-decoration: none;
             left: -50%;
             width: 80px;
@@ -97,7 +97,7 @@
             color: black;
             font-size: 20px;
         }
-        .dropdown:hover .dropdown-content {
+        .dropdown:hover .sidebar-div {
             display: block;
         }
         .dropdown-item{
@@ -106,19 +106,55 @@
             align-items:center
         }
 
-        .side-drop{
-            margin: 0;
-            padding: 0;
+        
+        /* 사이드바 with 드롭다운 */
+        .sidebar-dropdown{
+            background: #1b1a1b;
+            width: 380px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            overflow-y: auto;
+            transition: 0.6s ease;
+            transition-property: left;
         }
-        .side-drop .side-bar a{
-            padding-left: 20px;
+        .sidebar-dropdown .close-btn{
+            background: #33363a;
         }
-        .ide-dropBtn a:hover i{
-            transform: translateY(-50%) rotate(-180deg);
+        .login-img{
+            width: 100px;
+            margin: 15px;
+            margin-left: 70px;
+            border-radius: 50%;
+            border: 3px solid #b4b8b9;
         }
+        .close-btn{
+            position: absolute;
+            color: #fff;
+            font-size: 23px;
+            right: 0px;
+            margin: 15px;
+            cursor: pointer;
+        }
+        sidebar-dropdown-wrapper
 	</style>
 </head>
     <body>
+        <!-- 사이드바 with 드롭다운 -->
+        <div class="sidebar-dropdown">
+            <!-- 닫기 버튼 -->
+             <div class="sidebar-dropdown-wrapper">
+                <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <img src="#" alt="#" class="login-img">
+                <span class="logo">
+                    <a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a>
+                </spn>
+             </div>
+            
+        </div>
+
         <!-- flex로 구성된 헤더 -->
         <header class="header-bar">
             <div class="header-div">
@@ -126,23 +162,24 @@
                     <div class="sidebar-wrapper">
                         <i class="fa-solid fa-bars"></i>
                     </div>
-                    <div class="logo"><a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a></div>
+                    <div class="logo">
+                        <a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a>
+                    </div>
                 </div>
 
                 <div class="header-Wrap">
                     <!-- 드롭다운 메뉴 -->
                     <div class="test-dropdown dropdown">
                         <div class="headerItem">dropdown</div>
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">link 1</a>
-                            <a href="#" class="dropdown-item">link 2</a>
-                            <a href="#" class="dropdown-item">link 3</a>
+                        <!-- 사이드바 열기 버튼 -->
+                        <div class="sidebar-div">
+                            <i class="fas fa-times"></i>
                         </div>
                     </div>
                     <!--  -->
                     <a class="headerItem" href="#">About</a>
                     <a class="headerItem" href="#">Contact</a>
-                    <button class="loginBtn" onclick="location.href='login.html'">LogIn</button>
+                    <button class="loginBtn" onclick="location.href='loginform.html'">LogIn</button>
                 </div>
             </div>
         </header>

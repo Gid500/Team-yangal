@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <style>
+            html{
+                height: 100%;
+            }
+            body{
+                height: 100%;
+            }
+            .login-form{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            .logo{
+                text-align: center;
+            }
+            .logo a{
+                text-decoration: none;
+                color: black;
+                font-family: 'Inter';
+                font-style: normal;
+                font-size: 30px;
+                line-height: 300%;
+            }
+            .login-line{
+                border-radius: 7px;
+                border: solid 1px;
+                display: flex;
+                flex-direction: column;
+            }
+            .input-wrapper{
+                width: 400px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+            }
+            .flex-row{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .flex-row span a{
+                text-decoration: none;
+                color: black;
+            }
+            .flex-row a{
+                text-decoration: none;
+                color: black;
+            }
+            .loginbtn{
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" class="login-form">
+            <div class="input-wrapper">
+                <div class="logo"><a href="index.html">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a></div>
+                <legend class="login-line">
+                    <label for="userid">ID</label>
+                    <input type="text" class="userid" placeholder="ID">
+                    <label for="userpasword">Password</label>
+                    <input type="text" class="Password" placeholder="Password">
+                    <button type="submit" class="loginbtn">Login</button>
+                    <div class="flex-row">
+                        <span>
+                            <a href="">ID 찾기</a>
+                            <a href="">Password 찾기</a>
+                        </span>
+                        <a href="">회원가입</a>
+                    </div>
+                </legend>
+            </div>
+        </form>
+    </body>
+</html>

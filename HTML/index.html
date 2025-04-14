@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<style type="text/css">
+		*{
+			text-decoration: none;
+		}
+        /* header */
+		.header-bar{
+			display: flex; 
+			background: white; 
+            font-family: 'calibri';
+            justify-content: center;
+		}
+		.header-div{
+            width: 1280px;
+            height: 66px;
+			display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            border-bottom: solid;
+            color: #188C1B;
+		}
+		.logo a{
+			color: black; 
+            font-family: 'Inter';
+            font-style: normal;
+            font-size: 30px;
+            line-height: 300%;
+		}
+		.header-Wrap .test-dropdown{
+			list-style: none; 
+            display: inline-block;
+		}
+		.headerItem{
+			color: black; 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-right: 25px;
+		}
+		.loginBtn{
+            color: white;
+            cursor: pointer;
+			background-color: black; 
+            margin-left: 10px; 
+            border-radius: 10px; 
+            padding: 10px; 
+            width: 100px;
+            height: 45px;
+            padding: 10px 20px;
+            border-radius: 6.5px;
+		}
+        .sideWrapper {
+            width: 200px;
+			display: flex; 
+            height: 63px;
+            align-items: center; 
+            justify-content: space-between;
+        }
+        .sidebar-wrapper i{
+            cursor: pointer;
+            text-align: center;
+            width: 40px;
+            color: black;
+            font-size: 30px;
+        }        
+        .sidebar-wrapper .menu-btn{
+            padding-left: 10px;
+        }
+        @media (max-width: 600px) {
+            .headerItem{
+                display: none;
+            }
+        }
+        /* 드롭다운 메뉴 */
+        .dropdown{
+            display : inline-block;
+        }
+        .dropdown-content{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            display : none;
+            position : absolute;
+            z-index : 1;
+        }
+        .dropdown-content a{
+            text-decoration: none;
+            left: -50%;
+            width: 80px;
+            height: 60px;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-item{
+            display: flex;
+            justify-content:center;
+            align-items:center
+        }
+
+        .side-drop{
+            margin: 0;
+            padding: 0;
+        }
+        .side-drop .side-bar a{
+            padding-left: 20px;
+        }
+        .ide-dropBtn a:hover i{
+            transform: translateY(-50%) rotate(-180deg);
+        }
+	</style>
+</head>
+    <body>
+        <!-- flex로 구성된 헤더 -->
+        <header class="header-bar">
+            <div class="header-div">
+                <div class="sideWrapper">
+                    <div class="sidebar-wrapper">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="logo"><a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a></div>
+                </div>
+
+                <div class="header-Wrap">
+                    <!-- 드롭다운 메뉴 -->
+                    <div class="test-dropdown dropdown">
+                        <div class="headerItem">dropdown</div>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">link 1</a>
+                            <a href="#" class="dropdown-item">link 2</a>
+                            <a href="#" class="dropdown-item">link 3</a>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <a class="headerItem" href="#">About</a>
+                    <a class="headerItem" href="#">Contact</a>
+                    <button class="loginBtn" onclick="location.href='login.html'">LogIn</button>
+                </div>
+            </div>
+        </header>
+
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+            })
+        </script>
+    </body>
+</html>

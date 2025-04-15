@@ -21,3 +21,29 @@ function closeSidebar() {
     document.getElementById("overlay").classList.remove("active");
     document.getElementById("menuBtn").style.display = "block";
 }
+
+const slides = document.querySelector('.slides');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+const totalSlides = dots.length;
+
+function moveToSlide(index) {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    currentIndex = index;
+}
+
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        moveToSlide(index);
+    });
+});
+
+// 자동 슬라이드
+setInterval(() => {
+    const nextIndex = (currentIndex + 1) % totalSlides;
+    moveToSlide(nextIndex);
+}, 4000);
+

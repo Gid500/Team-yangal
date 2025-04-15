@@ -32,10 +32,6 @@
             font-size: 30px;
             line-height: 300%;
 		}
-		.header-Wrap .test-dropdown{
-			list-style: none; 
-            display: inline-block;
-		}
 		.headerItem{
 			color: black; 
             font-size: 18px; 
@@ -71,46 +67,23 @@
         .sidebar-wrapper .menu-btn{
             padding-left: 10px;
         }
+        .menu-btn i{
+            cursor: pointer;
+        }
         @media (max-width: 600px) {
             .headerItem{
                 display: none;
             }
         }
-        /* 드롭다운 메뉴 */
-        .dropdown{
-            display : inline-block;
-        }
-        .sidebar-div{
-            display: flex;
-            align-items: center;
-            text-align: center;
-            display : none;
-            position : absolute;
-            z-index : 1;
-        }
-        .sidebar-div a{
-            text-decoration: none;
-            left: -50%;
-            width: 80px;
-            height: 60px;
-            background-color: white;
-            color: black;
-            font-size: 20px;
-        }
-        .dropdown:hover .sidebar-div {
-            display: block;
-        }
-        .dropdown-item{
-            display: flex;
-            justify-content:center;
-            align-items:center
-        }
 
-        
         /* 사이드바 with 드롭다운 */
+        .login-img ~ span{
+            display: inline-block;
+        }
         .sidebar-dropdown{
-            background: #1b1a1b;
+            background: #fff;
             width: 380px;
+            left: -380px;
             height: 100vh;
             position: fixed;
             top: 0;
@@ -136,7 +109,51 @@
             margin: 15px;
             cursor: pointer;
         }
-        sidebar-dropdown-wrapper
+        .sidebar-dropdown-wrapper{
+            background: white;
+            height: 75px;
+            border-bottom: solid 1px;
+        }
+        .side-menu{
+            width: 100%;
+        }
+        .side-menu .side-item{
+            border-bottom: 1px solid black;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+        }
+        .side-menu .side-item a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px 30px;
+            line-height: 60px;
+        }
+        .sub-menu .sub-item{
+            border-bottom: 1px solid black;
+            position: relative;
+            cursor: pointer;
+        }
+        .side-item a .dropdown{
+            position: absolute;
+            right: 0;
+            margin: 20px;
+            transition: 0.3s ease;
+        }
+        .sub-menu .sub-item{
+            border: none;
+        }
+        .sidebar-dropdown.active{
+            left: 0;
+        }
+        .sub-menu{
+            display: none;
+        }
+        .rotate{
+            transform: rotate(90deg);
+        }
 	</style>
 </head>
     <body>
@@ -150,9 +167,36 @@
                 <img src="#" alt="#" class="login-img">
                 <span class="logo">
                     <a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a>
-                </spn>
+                </span>
              </div>
             
+             <!-- 메뉴 아이템 -->
+             <div class="side-menu">
+                <div class="side-item"><a href="#">item1</a></div>
+                <div class="side-item"><a class="sub-btn">item2
+                <!-- 드랍다운 -->
+                <!-- 드랍다운 화살표 -->
+                    <i class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <div class="sub-item"><a href="">Sub-item1</a></div>
+                    <div class="sub-item"><a href="">Sub-item2</a></div>
+                    <div class="sub-item"><a href="">Sub-item3</a></div>
+                </div>
+            </div>
+
+
+                <div class="side-item"><a href="#">item3</a></div>
+                <div class="side-item"><a class="sub-btn">item4
+                    <!-- 드랍다운 -->
+                    <!-- 드랍다운 화살표 -->
+                        <i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <div class="sub-item"><a href="">Sub-item1</a></div>
+                        <div class="sub-item"><a href="">Sub-item2</a></div>
+                    </div>
+                </div>
+                <div class="side-item"><a href="#">item5</a></div>
+             </div>
         </div>
 
         <!-- flex로 구성된 헤더 -->
@@ -160,7 +204,9 @@
             <div class="header-div">
                 <div class="sideWrapper">
                     <div class="sidebar-wrapper">
-                        <i class="fa-solid fa-bars"></i>
+                        <div class="menu-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
                     </div>
                     <div class="logo">
                         <a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a>
@@ -168,15 +214,7 @@
                 </div>
 
                 <div class="header-Wrap">
-                    <!-- 드롭다운 메뉴 -->
-                    <div class="test-dropdown dropdown">
-                        <div class="headerItem">dropdown</div>
-                        <!-- 사이드바 열기 버튼 -->
-                        <div class="sidebar-div">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
-                    <!--  -->
+                    <a class="headerItem" href="#">About</a>
                     <a class="headerItem" href="#">About</a>
                     <a class="headerItem" href="#">Contact</a>
                     <button class="loginBtn" onclick="location.href='loginform.html'">LogIn</button>
@@ -187,7 +225,22 @@
         <script src="jquery-3.7.1.min.js"></script>
         <script>
             $(document).ready(function(){
-                
+                // jquery for ex[and adn cllapse the sidebar]
+                $('.menu-btn').click(function(){
+                    $('.sidebar-dropdown').addClass('active');
+                    $('.menu-btn').css("visibility", "hidden");
+                });
+                // juery for toggle sub menus
+                $('.close-btn').click(function(){
+                    $('.sidebar-dropdown').removeClass('active');
+                    $('.menu-btn').css("visibility", "visible");
+                });
+
+                // jquery for toggle sub menus
+                $(".sub-btn").on('click', function(){
+                    $(this).next(".sub-menu").slideToggle();
+                    $(this).find(".dropdown").toggleClass('rotate');
+                });
             })
         </script>
     </body>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<style type="text/css">
+        @media (max-width: 600px) {
+            .headerItem{
+                display: none;
+            }
+        }
+
+        /* 사이드바 with 드롭다운 */
+        .login-img ~ span{
+            display: inline-block;
+        }
+        .sidebar-dropdown{
+            background: #fff;
+            width: 250px;
+            left: -250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            overflow-y: auto;
+            transition: 0.6s ease;
+            transition-property: left;
+        }
+        .sidebar-dropdown .close-btn{
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background: #33363a;
+        }
+        .login-img{
+            vertical-align: middle;
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid #b4b8b9;
+        }
+        .close-btn{
+            position: absolute;
+            color: #fff;
+            font-size: 25px;
+            right: 0px;
+            margin: 10px 10px 0 0;
+            cursor: pointer;
+        }
+        .sidebar-dropdown-wrapper{
+            text-align: center;
+            background: white;
+            height:60px;
+            border-bottom: solid 1px;
+        }
+        .sidebar-dropdown-wrapper a{
+            line-height: 60px;
+        }
+        .side-menu{
+            width: 100%;
+        }
+        .side-menu .side-item{
+            border-bottom: 1px solid black;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+        }
+        .side-menu .side-item a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px 30px;
+            line-height: 60px;
+        }
+        .sub-menu .sub-item{
+            border-bottom: 1px solid black;
+            position: relative;
+            cursor: pointer;
+        }
+        .side-item a .dropdown{
+            position: absolute;
+            right: 0;
+            margin: 20px;
+            transition: 0.3s ease;
+        }
+        .sub-menu .sub-item{
+            border: none;
+        }
+        .sidebar-dropdown.active{
+            left: 0;
+        }
+        .sub-menu{
+            display: none;
+        }
+        .rotate{
+            transform: rotate(90deg);
+        }
+	</style>
+</head>
+    <body>
+        <!-- 사이드바 with 드롭다운 -->
+        <div class="sidebar-dropdown">
+            <!-- 닫기 버튼 -->
+             <div class="sidebar-dropdown-wrapper">
+                <div class="close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <span class="logo">
+                    <span class="logo">
+                        <a href="index.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+                    </span>
+                </span>
+                <img src="Empty.png" alt="#" class="login-img">
+             </div>
+            
+             <!-- 메뉴 아이템 -->
+             <div class="side-menu">
+                <div class="side-item"><a href="#">item1</a></div>
+                <div class="side-item"><a class="sub-btn">item2
+                <!-- 드랍다운 -->
+                <!-- 드랍다운 화살표 -->
+                    <i class="fas fa-angle-right dropdown"></i></a>
+                <div class="sub-menu">
+                    <div class="sub-item"><a href="">Sub-item1</a></div>
+                    <div class="sub-item"><a href="">Sub-item2</a></div>
+                    <div class="sub-item"><a href="">Sub-item3</a></div>
+                </div>
+            </div>
+
+                <div class="side-item"><a href="#">item3</a></div>
+                <div class="side-item"><a class="sub-btn">item4
+                    <!-- 드랍다운 -->
+                    <!-- 드랍다운 화살표 -->
+                        <i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <div class="sub-item"><a href="">Sub-item1</a></div>
+                        <div class="sub-item"><a href="">Sub-item2</a></div>
+                    </div>
+                </div>
+                <div class="side-item"><a href="#">item5</a></div>
+             </div>
+        </div>
+
+        <!-- flex로 구성된 헤더 -->
+        <div class="header-wrapper">
+            <header class="header">
+                <div class="sideWrapper">
+                    <div class="sidebar-wrapper">
+                        <div class="menu-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                // jquery for ex[and adn cllapse the sidebar]
+                $('.menu-btn').click(function(){
+                    $('.sidebar-dropdown').addClass('active');
+                    $('.menu-btn').css("visibility", "hidden");
+                });
+                // juery for toggle sub menus
+                $('.close-btn').click(function(){
+                    $('.sidebar-dropdown').removeClass('active');
+                    $('.menu-btn').css("visibility", "visible");
+                });
+
+                // jquery for toggle sub menus
+                $(".sub-btn").on('click', function(){
+                    $(this).next(".sub-menu").slideToggle();
+                    $(this).find(".dropdown").toggleClass('rotate');
+                });
+            })
+        </script>
+    </body>
+</html>

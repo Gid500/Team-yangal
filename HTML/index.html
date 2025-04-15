@@ -1,247 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Navigation Bar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-	<style type="text/css">
-		*{
-			text-decoration: none;
-		}
-        /* header */
-		.header-bar{
-			display: flex; 
-			background: white; 
-            font-family: 'calibri';
-            justify-content: center;
-		}
-		.header-div{
-            width: 1280px;
-            height: 66px;
-			display: flex; 
-            align-items: center; 
-            justify-content: space-between;
-            border-bottom: solid;
-            color: #188C1B;
-		}
-		.logo a{
-			color: black; 
-            font-family: 'Inter';
-            font-style: normal;
-            font-size: 30px;
-            line-height: 300%;
-		}
-		.headerItem{
-			color: black; 
-            font-size: 18px; 
-            font-weight: bold; 
-            margin-right: 25px;
-		}
-		.loginBtn{
-            color: white;
-            cursor: pointer;
-			background-color: black; 
-            margin-left: 10px; 
-            border-radius: 10px; 
-            padding: 10px; 
-            width: 100px;
-            height: 45px;
-            padding: 10px 20px;
-            border-radius: 6.5px;
-		}
-        .sideWrapper {
-            width: 200px;
-			display: flex; 
-            height: 63px;
-            align-items: center; 
-            justify-content: space-between;
-        }
-        .sidebar-wrapper i{
-            cursor: pointer;
-            text-align: center;
-            width: 40px;
-            color: black;
-            font-size: 30px;
-        }        
-        .sidebar-wrapper .menu-btn{
-            padding-left: 10px;
-        }
-        .menu-btn i{
-            cursor: pointer;
-        }
-        @media (max-width: 600px) {
-            .headerItem{
-                display: none;
-            }
-        }
-
-        /* 사이드바 with 드롭다운 */
-        .login-img ~ span{
-            display: inline-block;
-        }
-        .sidebar-dropdown{
-            background: #fff;
-            width: 380px;
-            left: -380px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            overflow-y: auto;
-            transition: 0.6s ease;
-            transition-property: left;
-        }
-        .sidebar-dropdown .close-btn{
-            background: #33363a;
-        }
-        .login-img{
-            width: 100px;
-            margin: 15px;
-            margin-left: 70px;
-            border-radius: 50%;
-            border: 3px solid #b4b8b9;
-        }
-        .close-btn{
-            position: absolute;
-            color: #fff;
-            font-size: 23px;
-            right: 0px;
-            margin: 15px;
-            cursor: pointer;
-        }
-        .sidebar-dropdown-wrapper{
-            background: white;
-            height: 75px;
-            border-bottom: solid 1px;
-        }
-        .side-menu{
-            width: 100%;
-        }
-        .side-menu .side-item{
-            border-bottom: 1px solid black;
-            position: relative;
-            cursor: pointer;
-            text-align: center;
-        }
-        .side-menu .side-item a{
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-            cursor: pointer;
-            padding: 5px 30px;
-            line-height: 60px;
-        }
-        .sub-menu .sub-item{
-            border-bottom: 1px solid black;
-            position: relative;
-            cursor: pointer;
-        }
-        .side-item a .dropdown{
-            position: absolute;
-            right: 0;
-            margin: 20px;
-            transition: 0.3s ease;
-        }
-        .sub-menu .sub-item{
-            border: none;
-        }
-        .sidebar-dropdown.active{
-            left: 0;
-        }
-        .sub-menu{
-            display: none;
-        }
-        .rotate{
-            transform: rotate(90deg);
-        }
-	</style>
+  <meta charset="UTF-8" />
+  <title>VITANTAN 메뉴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="maintest.css">
 </head>
-    <body>
-        <!-- 사이드바 with 드롭다운 -->
-        <div class="sidebar-dropdown">
-            <!-- 닫기 버튼 -->
-             <div class="sidebar-dropdown-wrapper">
-                <div class="close-btn">
-                    <i class="fas fa-times"></i>
-                </div>
-                <img src="#" alt="#" class="login-img">
-                <span class="logo">
-                    <a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a>
-                </span>
-             </div>
-            
-             <!-- 메뉴 아이템 -->
-             <div class="side-menu">
-                <div class="side-item"><a href="#">item1</a></div>
-                <div class="side-item"><a class="sub-btn">item2
-                <!-- 드랍다운 -->
-                <!-- 드랍다운 화살표 -->
-                    <i class="fas fa-angle-right dropdown"></i></a>
-                <div class="sub-menu">
-                    <div class="sub-item"><a href="">Sub-item1</a></div>
-                    <div class="sub-item"><a href="">Sub-item2</a></div>
-                    <div class="sub-item"><a href="">Sub-item3</a></div>
-                </div>
-            </div>
+<body>
+  <div class="header">
+    <!-- 왼쪽: 햄버거 + 로고 -->
+    <div class="header-left">
+      <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
+      <div class="logo">
+        <a href="index.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+        </a>
+      </div>
+    </div>
+  
+    <!-- 오른쪽: 카테고리 + 로그인 -->
+    <div class="header-right">
+      <nav class="nav-menu">
+        <a href="#">VITAMIN</a>
+        <a href="#">오늘의 영양</a>
+        <a href="#">MARKET</a>
+        <a href="#">COMMUNITY</a>
+      </nav>
+      <a href="../login/logintest.html" class="login-btn">로그인</a>
+    </div>
+  </div>
+  <!-- 사이드바 -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header logo">
+      <a href="index.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+      </a>
+      <span style="margin: 0 10px;">|</span>
+      <div class="label">
+        <span style="margin-right: 10px;">
+          <a href="../login/logintest.html">로그인</a></span>
+      </div>
+      <button class="close-btn" onclick="toggleSidebar()">✖</button>
+    </div>
+    <a href="#">홈</a>
+    <a href="#">Q & A</a>
+    <a href="#">고객센터</a>
+  </div>
 
+  <!-- 오버레이 -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+  
+  <script src="maintest.js"></script>
+</body>
 
-                <div class="side-item"><a href="#">item3</a></div>
-                <div class="side-item"><a class="sub-btn">item4
-                    <!-- 드랍다운 -->
-                    <!-- 드랍다운 화살표 -->
-                        <i class="fas fa-angle-right dropdown"></i></a>
-                    <div class="sub-menu">
-                        <div class="sub-item"><a href="">Sub-item1</a></div>
-                        <div class="sub-item"><a href="">Sub-item2</a></div>
-                    </div>
-                </div>
-                <div class="side-item"><a href="#">item5</a></div>
-             </div>
-        </div>
-
-        <!-- flex로 구성된 헤더 -->
-        <header class="header-bar">
-            <div class="header-div">
-                <div class="sideWrapper">
-                    <div class="sidebar-wrapper">
-                        <div class="menu-btn">
-                            <i class="fa-solid fa-bars"></i>
-                        </div>
-                    </div>
-                    <div class="logo">
-                        <a href="#">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a>
-                    </div>
-                </div>
-
-                <div class="header-Wrap">
-                    <a class="headerItem" href="#">About</a>
-                    <a class="headerItem" href="#">About</a>
-                    <a class="headerItem" href="#">Contact</a>
-                    <button class="loginBtn" onclick="location.href='loginform.html'">LogIn</button>
-                </div>
-            </div>
-        </header>
-
-        <script src="jquery-3.7.1.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                // jquery for ex[and adn cllapse the sidebar]
-                $('.menu-btn').click(function(){
-                    $('.sidebar-dropdown').addClass('active');
-                    $('.menu-btn').css("visibility", "hidden");
-                });
-                // juery for toggle sub menus
-                $('.close-btn').click(function(){
-                    $('.sidebar-dropdown').removeClass('active');
-                    $('.menu-btn').css("visibility", "visible");
-                });
-
-                // jquery for toggle sub menus
-                $(".sub-btn").on('click', function(){
-                    $(this).next(".sub-menu").slideToggle();
-                    $(this).find(".dropdown").toggleClass('rotate');
-                });
-            })
-        </script>
-    </body>
 </html>

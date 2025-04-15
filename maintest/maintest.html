@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>VITANTAN 메뉴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="maintest.css">
+</head>
+<body>
+  <div class="header">
+    <!-- 왼쪽: 햄버거 + 로고 -->
+    <div class="header-left">
+      <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
+      <div class="logo">
+        <span>VIT</span><span class="highlight">A</span><span>NT</span><span class="highlight">A</span><span>N</span>
+      </div>
+    </div>
+  
+    <!-- 오른쪽: 카테고리 + 로그인 -->
+    <div class="header-right">
+      <nav class="nav-menu">
+        <a href="#">VITAMIN</a>
+        <a href="#">오늘의 영양</a>
+        <a href="#">MARKET</a>
+        <a href="#">COMMUNITY</a>
+      </nav>
+      <a href="../login/logintest.html" class="login-btn">로그인</a>
+    </div>
+  </div>
+  <!-- 사이드바 -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="label logo">
+        <span>VIT</span><span class="highlight">A</span><span>NT</span><span class="highlight">A</span><span>N</span>
+        <span style="margin: 0 10px;">|</span>
+        <span style="margin-right: 10px;">
+          <a href="../login/logintest.html">로그인</a></span>
+      </div>
+      <button class="close-btn" onclick="toggleSidebar()">✖</button>
+    </div>
+    <a href="#">홈</a>
+    <a href="#">Q & A</a>
+    <a href="#">고객센터</a>
+  </div>
+
+  <!-- 오버레이 -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+  
+  <script src="maintest.js"></script>
+</body>
+
+</html>

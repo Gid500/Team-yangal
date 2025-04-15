@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <form class="login-form">
+  <form class="login-form" id="signup-form">
     <div class="input-wrapper">
       <div class="logo"><a href="../main/main.html">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a></div>
       <fieldset class="login-line">
@@ -28,7 +28,7 @@
           <button type="button" class="login-btn" onclick="verifyCode()">인증번호 조회</button>
         </div>
 
-        <button type="button" class="login-btn" onclick="showResult()">완료</button>
+        <button type="submit" class="login-btn" onclick="showResult()">완료</button>
 
         <div class="flex-row" style="margin-top: 16px;">
           <a href="login.html">로그인 화면으로 돌아가기</a>
@@ -41,7 +41,7 @@
         <li><a href="../main/main.html">home</a></li>
         <li><a href="login.html">Log-In</a></li>
         <li><a href="findid.html">ID 찾기</strong></a></li>
-        <li><a href="findpw.html"">PW 찾기</a></li>
+        <li><a href="findpw.html">PW 찾기</a></li>
         <li><a href="../sign_up/signup.html">회원가입</a></li>
       </ul>
     </nav>

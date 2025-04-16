@@ -17,7 +17,6 @@
         </a>
       </div>
     </div>
-  
     <!-- 오른쪽: 카테고리 + 로그인 -->
     <div class="header-right">
       <nav class="nav-menu">
@@ -29,22 +28,41 @@
       <a href="../login/login.html" class="login-btn">로그인</a>
     </div>
   </div>
+
   <!-- 사이드바 -->
   <div class="sidebar" id="sidebar">
+  <!-- 사이드바 헤더 (로고 + 닫기 버튼) -->
     <div class="sidebar-header logo">
-      <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
-      </a>
-      <span style="margin: 0 10px;">|</span>
+      <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+      
       <div class="label">
-        <span style="margin-right: 10px;">
-          <a href="../login/login.html">로그인</a></span>
+        <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
       </div>
       <button class="close-btn" onclick="toggleSidebar()">✖</button>
     </div>
-    <a href="main.html">홈</a>
-    <a href="#">Q & A</a>
-    <a href="#">고객센터</a>
+
+    <!-- 사용자 정보 영역 -->
+    <div class="user-info-box" id="userInfo" style="display: none;">
+      <div class="user-icon">👤</div>
+      <div class="user-text">
+        <div class="user-name-row">
+          <span class="user-name" id="userName"></span>
+          <button id="logoutBtn" class="logout-btn">로그아웃</button>
+        </div>
+        <div class="user-submenu">
+          <a href="#">마이페이지</a> 
+          <a href="#" id="logoutBtn">리뷰</a> 
+          <a href="#" id="logoutBtn">찜내역/주문내역</a> 
+          <a href="#" id="logoutBtn">고객센터</a> 
+        </div>
+      </div>
+    </div>
+    <!-- 메뉴 항목 -->
+    <a href="main.html" class="sidebar-menu">홈</a>
+    <a href="#" class="sidebar-menu">Q & A</a>
+    <a href="#" class="sidebar-menu">고객센터</a>
   </div>
+
   
   <!-- 오버레이 -->
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
@@ -104,6 +122,9 @@
   <!-- Footer 끝 -->
 
   <script src="main.js"></script>
+  <script src="../login/login.js"></script>
+  <script src="../login/logout.js"></script>
+
 </body>
 
 </html>

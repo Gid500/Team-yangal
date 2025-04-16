@@ -5,6 +5,27 @@
   <title>VITANTAN 메뉴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="maintest.css">
+  <style>
+    html{
+      height: 100%;
+    }
+    body{
+      height: 100%;
+    }
+    .hidden {
+      display: none;
+    }
+    .loginbtn-div{
+      width: 90px;
+      height: 36px;
+      position: relative;
+    }
+    #logout-btn{
+      position: absolute;
+      left: -8%;
+    }
+    
+  </style>
 </head>
 <body>
   <div class="header">
@@ -16,7 +37,7 @@
         </a>
       </div>
     </div>
-  
+    
     <!-- 오른쪽: 카테고리 + 로그인 -->
     <div class="header-right">
       <nav class="nav-menu">
@@ -25,9 +46,13 @@
         <a href="#">MARKET</a>
         <a href="#">COMMUNITY</a>
       </nav>
-      <a href="../login/logintest.html" class="login-btn">로그인</a>
+      <div class="loginbtn-div">
+        <a href="../login/login.html" class="login-btn hidden" id="login-btn">로그인</a>
+        <a href="index.html" class="login-btn hidden" id="logout-btn">로그아웃</a>
+      </div>
     </div>
   </div>
+  
   <!-- 사이드바 -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header logo">
@@ -36,7 +61,9 @@
       <span style="margin: 0 10px;">|</span>
       <div class="label">
         <span style="margin-right: 10px;">
-          <a href="../login/logintest.html">로그인</a></span>
+          <a href="../login/login.html" class="login-btn hidden" id="login-btn">로그인</a>
+          <a href="../login/login.html" class="login-btn hidden" id="logout-link">로그아웃</a>
+        </span>
       </div>
       <button class="close-btn" onclick="toggleSidebar()">✖</button>
     </div>
@@ -44,11 +71,27 @@
     <a href="#">Q & A</a>
     <a href="#">고객센터</a>
   </div>
-
+  
   <!-- 오버레이 -->
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
   
   <script src="maintest.js"></script>
+  <script>
+    const user = localStorage.getItem("user");
+    const logoutbtn = document.getElementById("logout-btn");
+    const loginbtn = document.getElementById("login-btn");
+
+    if (user) {
+      logoutbtn.classList.remove('hidden');
+    } else {
+      loginbtn.classList.remove('hidden');
+    }
+    document
+        .getElementById("logout-btn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("user");
+        });
+  </script>
 </body>
 
 </html>

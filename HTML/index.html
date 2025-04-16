@@ -24,7 +24,12 @@
       position: absolute;
       left: -8%;
     }
-    
+    span .login-link{
+      display: none;
+    }
+    span .logout-link{
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -61,8 +66,8 @@
       <span style="margin: 0 10px;">|</span>
       <div class="label">
         <span style="margin-right: 10px;">
-          <a href="../login/login.html" class="login-btn hidden" id="login-btn">로그인</a>
-          <a href="../login/login.html" class="login-btn hidden" id="logout-link">로그아웃</a>
+          <a href="../login/login.html" class="login-link" id="login-link">로그인</a>
+          <a href="../login/login.html" class="logout-link" id="logout-link">로그아웃</a>
         </span>
       </div>
       <button class="close-btn" onclick="toggleSidebar()">✖</button>
@@ -79,12 +84,16 @@
   <script>
     const user = localStorage.getItem("user");
     const logoutbtn = document.getElementById("logout-btn");
+    const logoutlink = document.getElementById("logout-link");
     const loginbtn = document.getElementById("login-btn");
+    const loginlink = document.getElementById("login-link");
 
     if (user) {
       logoutbtn.classList.remove('hidden');
+      logoutlink.classList.remove('logout-link');
     } else {
       loginbtn.classList.remove('hidden');
+      loginlink.classList.remove('login-link');
     }
     document
         .getElementById("logout-btn")

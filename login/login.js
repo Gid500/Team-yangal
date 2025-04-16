@@ -1,6 +1,6 @@
 document
-.getElementById("loginForm")
-.addEventListener("submit", function (event) {
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
     const userid = document.getElementById("userid").value;
     const password = document.getElementById("userpassword").value;
@@ -8,14 +8,18 @@ document
     const user = localStorage.getItem(userid);
 
     if (user) {
-    const parsedUser = JSON.parse(user);
-    if (parsedUser.password === password) {
+      const parsedUser = JSON.parse(user);
+      if (parsedUser.password === password) {
+        // 로그인 성공 시 저장
+        parsedUser.userid = userid;
         localStorage.setItem("user", JSON.stringify(parsedUser));
-        window.location.href = "../HTML/index.html";
-    } else {
+        localStorage.setItem("isLoggedIn", "true"); 
+        localStorage.setItem("loggedInUserId", userid); 
+        window.location.href = "../main/main.html";
+      } else {
         alert("Incorrect password");
-    }
+      }
     } else {
-    alert("User not found");
+      alert("User not found");
     }
-});
+  });

@@ -1,3 +1,4 @@
+//햄버거버튼
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     const overlay = document.getElementById("overlay");
@@ -21,33 +22,7 @@ function closeSidebar() {
     document.getElementById("menuBtn").style.display = "block";
 }
 
-// 배너
-const slides = document.querySelector('.slides');
-const dots = document.querySelectorAll('.dot');
-let currentIndex = 0;
-const totalSlides = dots.length;
-
-function moveToSlide(index) {
-    slides.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-    currentIndex = index;
-}
-
-dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-        const index = parseInt(dot.dataset.index);
-        moveToSlide(index);
-    });
-});
-
-// 자동 슬라이드
-setInterval(() => {
-    const nextIndex = (currentIndex + 1) % totalSlides;
-    moveToSlide(nextIndex);
-}, 4000);
-
-// 로그인, 로그아웃
+// 로그인&로그아웃
 document.addEventListener("DOMContentLoaded", function () {
     const userInfo = document.getElementById("userInfo");
     const userName = document.getElementById("userName");
@@ -70,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loginBtn.addEventListener("click", function (e) {
         e.preventDefault();
         localStorage.removeItem("user");
-        window.location.href = "main.html";
+        window.location.href = "../main/main.html";
       });
   
       // 사이드바 로그인 숨기기
@@ -86,10 +61,30 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.removeItem("user");
         localStorage.removeItem("isLoggedIn");
         localStorage.removeItem("loggedInUserId");
-        window.location.href = "main.html";
+        window.location.href = "../main/main.html";
       });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const profileName = document.getElementById("profileName");
+    const storedUser = localStorage.getItem("user");
   
-  
-  
+    if (storedUser && profileName) {
+      const user = JSON.parse(storedUser);
+      profileName.textContent = `${user.userid}님`;
+    }
+});
+
+/*
+// 로그인 상태가 아니면 접근 차단
+document.addEventListener("DOMContentLoaded", function () {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn !== "true") {
+    alert("로그인 후 이용하실 수 있습니다.");
+    window.location.href = "../login/login.html"; // 또는 main.html
+    return; // 이후 스크립트 실행 중단
+  }
+});
+*/

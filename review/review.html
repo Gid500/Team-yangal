@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <title>VITANTAN 메뉴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="../main/logo.css">
+  <link rel="stylesheet" href="../main/header.css">
+  <link rel="stylesheet" href="../main/footer.css">
+  <link rel="stylesheet" href="mypage.css">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
 </head>
 <body>
   <div class="header">
@@ -13,7 +16,7 @@
     <div class="header-left">
       <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
       <div class="logo">
-        <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+        <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
         </a>
       </div>
     </div>
@@ -50,7 +53,7 @@
           <button id="logoutBtn" class="logout-btn">로그아웃</button>
         </div>
         <div class="user-submenu">
-          <a href="../mypage/mypage.html">마이페이지</a> 
+          <a href="mypage.html">마이페이지</a> 
           <a href="#" id="logoutBtn">리뷰</a> 
           <a href="#" id="logoutBtn">찜내역/주문내역</a> 
           <a href="#" id="logoutBtn">고객센터</a> 
@@ -59,49 +62,42 @@
     </div>
     <!-- 메뉴 항목 -->
     <a href="main.html" class="sidebar-menu">홈</a>
-    <a href="#" class="sidebar-menu">Q & A</a>
+    <a href="../q&a/qanda.html" class="sidebar-menu">Q & A</a>
     <a href="#" class="sidebar-menu">고객센터</a>
   </div>
 
   
   <!-- 오버레이 -->
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-  <!-- 배너-->
-   
-  <section class="main-banner">
-    <div class="banner-content">
-      <h1>당신을 위한 맞춤 영양 솔루션</h1>
-      <p>VITANTAN과 함께 건강한 라이프스타일을 시작하세요.</p>
-      <a href="#" class="banner-btn">바로 시작하기</a>
-    </div>
-  </section>
+  
 
-  <!-- 슬라이드 배너 -->
-  <div class="slider">
-    <div class="slides">
-      <div class="slide active" style="background-color:  #dff04b;">
-        <div class="text-area">
-          <h2>영양제도 식단도<br>VITANTAN과 함께 라이프스타일을 시작하세요</h2>
+  <!-- 여기서 마이페이지 메인 코드 -->
+  <div class="mypage-container">
+
+    <!--  왼쪽: 프로필 + 메뉴 -->
+    <aside class="mypage-sidebar">
+        <div class="profile-section">
+          <!-- 아이콘 -->
+          <div class="profile-icon">👤</div>
+          <!-- 로그인한 ID 이름 -->
+          <div class="profile-name" id="profileName">님</div>
         </div>
-        <div class="image-area">
-          <img src="vitamin.jpg" alt="앱 이미지" />
-        </div>
+        <nav class="menu-section">
+          <a href="#">주문내역</a>
+          <a href="#">찜내역</a>
+          <a href="#">리뷰</a>
+          <a href="#">문의/고객센터</a>
+        </nav>
+      </aside>
+      
+    <!--  오른쪽: 달력 -->
+    <main class="mypage-main">
+      <div class="calendar-wrapper">
+        <h1>비타민 다이어리</h1>
+        <div id='calendar'></div>
       </div>
-      <!-- 두 번째 슬라이드 예시 -->
-      <div class="slide" style="background-color: #a5fa6d;">
-        <div class="text-area">
-          <h2>개인의 건강 상태에 따라<br>영양제를 추천해요</h2>
-          <p>데이터 기반 맞춤형 추천</p>
-        </div>
-        <div class="image-area">
-          <img src="nutri.jpg" alt="앱 이미지 2" />
-        </div>
-      </div>
-    </div>
-    <div class="dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-    </div>
+    </main>
+  
   </div>
 
   <!-- Footer 시작 -->
@@ -121,10 +117,12 @@
   </footer>
   <!-- Footer 끝 -->
 
-  <script src="main.js"></script>
-  <script src="../login/login.js"></script>
-  <script src="../login/logout.js"></script>
+  <!-- fullcalendar CDN -->
+  <script src="mypage.js"></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+  <script src="calendar.js"></script>
 
+  <script src="../login/logout.js"></script>
 </body>
 
 </html>

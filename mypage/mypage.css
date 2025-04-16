@@ -1,0 +1,96 @@
+.mypage-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin: 100px 40px 40px; /* header와 footer 사이 확보 */
+}
+  
+
+/* 왼쪽 프로필 메뉴 */
+.mypage-sidebar {
+    width: 220px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+/* 오른쪽 메인 달력 영역 */
+.mypage-main {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    min-width: 600px;
+}
+#calendar {
+    min-height: 500px;
+    background-color: white;
+    padding: 20px; /* 👈 여유 공간 확보용 */
+    border-radius: 8px;
+}
+  
+    
+.calendar-wrapper {
+    min-height: 500px;
+}
+  
+.calendar-wrapper h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: #585555;
+}
+
+.calendar-wrapper h1:hover {
+    color: #aab6067c;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+  
+.profile-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+  
+.profile-name {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 15px;
+    background-color: #f0f8ec;
+    border: 1px solid #d5e8d4;
+    border-radius: 10px;
+}
+  
+
+.menu-section a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+  
+.menu-section a:hover {
+    background-color: #d1eed5;
+}
+  
+  

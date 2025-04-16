@@ -1,25 +1,3 @@
-* {
-    text-decoration: none;
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.logo a{
-    font-size: 22px;
-    font-weight: bold;
-    align-items: center;
-    white-space: nowrap;
-    gap: 2px;
-}
-.logo a{
-    color: black;
-}
-.logo .highlight {
-    color: #f1c40f; /* 노란색 */
-}
 /* 헤더 */
 .header {
     display: flex;
@@ -55,7 +33,7 @@ body {
     z-index: 1005;
 }
 
-/* 사이드바 */
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -138,7 +116,6 @@ border-top: 1px dashed #ccc;
     padding: 100px 20px 20px;
 }
 
-/* 사이드바2 */
 .user-info-box {
     display: flex;
     flex-direction: column;
@@ -231,9 +208,7 @@ border-top: 1px dashed #ccc;
   .simple-link:hover {
     color: white;
     background: none;
-  }
-
-
+}
 /* 카테고리 메뉴 */
 .nav-menu {
     display: flex;
@@ -252,7 +227,6 @@ border-top: 1px dashed #ccc;
 .nav-menu a:hover {
     color: #6fcf97; /* 밝은 초록색 */
 }
-
 /* 로그인 버튼 */
 .login-btn {
     display: inline-flex;
@@ -274,137 +248,3 @@ border-top: 1px dashed #ccc;
 .login-btn:hover{
     color: #6fcf97;
 }
-
-/* 배너 */
-.main-banner {
-    width: 100%;
-    height: 500px;
-    margin-top: 80px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-  
-    /* 🔸 배경 이미지 적용 */
-    background: url('cute.jpg') no-repeat center center;
-    background-size: cover;
-}
-  
-  /* 어두운 오버레이 추가로 텍스트 가독성 확보 */
-.main-banner::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
-  
-.banner-content {
-    position: relative;
-    z-index: 2; /* 오버레이 위에 올라오게 설정 */
-    background-color: rgba(0, 0, 0, 0.5); /* 텍스트 배경 */
-    padding: 30px 40px;
-    border-radius: 16px;
-}
-  
-.banner-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-  
-.banner-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-  
-.banner-btn {
-    background-color: #f1c40f;
-    color: black;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-  
-.banner-btn:hover {
-    background-color: #d4ac0d;
-}
-
-
-/* 슬라이드 배너 */
-.slider {
-    width: 90%;
-    max-width: 1200px;
-    height: 300px;
-    margin: 30px auto;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px;
-}
-  
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
-}
-  
-.slide {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    box-sizing: border-box;
-    color: white;
-}
-  
-.text-area h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 0 10px;
-    line-height: 1.4;
-}
-  
-.text-area p {
-    font-size: 16px;
-    opacity: 0.9;
-}
-  
-.image-area img {
-    width: 200px;
-    transform: rotate(-10deg);
-}
-  
-.dots {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-}
-  
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: white;
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-  
-.dot.active {
-    opacity: 1;
-}
-  
-  
-  
-  

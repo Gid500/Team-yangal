@@ -1,0 +1,106 @@
+/* order.css */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .tab-buttons button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    background: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  .tab-buttons .active {
+    background-color: #333;
+    color: white;
+  }
+  
+  .order-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    background-color: #fafafa;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .item-details {
+    flex: 2;
+    padding: 0 20px;
+  }
+  
+  .item-company,
+  .item-name {
+    font-size: 16px;
+    margin: 4px 0;
+  }
+  
+  .item-review,
+  .item-price,
+  .item-status {
+    color: #888;
+    font-size: 14px;
+    margin: 2px 0;
+  }
+  
+  .item-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  
+  .write-btn,
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .write-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }

@@ -2,13 +2,12 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>VITANTAN 메뉴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>주문내역</title>
   <link rel="stylesheet" href="../main/logo.css">
   <link rel="stylesheet" href="../main/header.css">
   <link rel="stylesheet" href="../main/footer.css">
-  <link rel="stylesheet" href="mypage.css">
-  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+  <link rel="stylesheet" href="order.css" />
 </head>
 <body>
   <div class="header">
@@ -16,7 +15,7 @@
     <div class="header-left">
       <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
       <div class="logo">
-        <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+        <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
         </a>
       </div>
     </div>
@@ -34,7 +33,7 @@
 
   <!-- 사이드바 -->
   <div class="sidebar" id="sidebar">
-  <!-- 사이드바 헤더 (로고 + 햄버거닫기 버튼) -->
+  <!-- 사이드바 헤더 (로고 + 닫기 버튼) -->
     <div class="sidebar-header logo">
       <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
       
@@ -53,55 +52,49 @@
           <button id="logoutBtn" class="logout-btn">로그아웃</button>
         </div>
         <div class="user-submenu">
-          <a href="mypage.html">마이페이지</a> 
+          <a href="../mypage/mypage.html">마이페이지</a> 
           <a href="#" id="logoutBtn">리뷰</a> 
-          <a href="../cart/likes.html" id="logoutBtn">찜내역/주문내역</a> 
+          <a href="#" id="logoutBtn">찜내역/주문내역</a> 
           <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
         </div>
       </div>
     </div>
     <!-- 메뉴 항목 -->
     <a href="main.html" class="sidebar-menu">홈</a>
-    <a href="../q&a/qanda.html" class="sidebar-menu">Q & A</a>
+    <a href="#" class="sidebar-menu">Q & A</a>
     <a href="../servicecenter/customer.html" class="sidebar-menu">고객센터</a>
   </div>
 
   
   <!-- 오버레이 -->
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-  
+  <!-- 배너-->
+  <div class="container">
+    <h2 class="page-title">주문내역</h2>
 
-  <!-- 여기서 마이페이지 메인 코드 -->
-  <div class="mypage-container">
+    <div class="tab-buttons">
+      <button onclick="location.href='likes.html'">찜</button>
+      <button class="active" onclick="location.href='order.html'">주문내역</button>
+    </div>
 
-    <!--  왼쪽: 프로필 + 메뉴 -->
-    <aside class="mypage-sidebar">
-        <div class="profile-section">
-          <!-- 아이콘 -->
-          <div class="profile-icon">👤</div>
-          <!-- 로그인한 ID 이름 -->
-          <div class="profile-name" id="profileName">님</div>
+    <ul class="order-list">
+      <li class="list-item order-item">
+        <div class="item-image">이미지</div>
+        <div class="item-details">
+          <p class="item-company">만든회사</p>
+          <p class="item-name">상품명</p>
+          <p class="item-review">⭐ 4.7 | 1,212개 리뷰</p>
+          <p class="item-price">15,000원</p>
+          <p class="item-status">배송상태: 배송중</p>
         </div>
-        <nav class="menu-section">
-          <a href="../cart/likes.html">찜내역</a>
-          <a href="../cart/order.html">주문내역</a>
-          <a href="#">리뷰</a>
-          <a href="#">문의</a>
-          <a href="../servicecenter/customer.html">고객센터</a>
-        </nav>
-      </aside>
-      
-    <!--  오른쪽: 달력 -->
-    <main class="mypage-main">
-      <div class="calendar-wrapper">
-        <h1>비타민 다이어리</h1>
-        <div id='calendar'></div>
-      </div>
-    </main>
-  
+        <div class="item-actions">
+          <button class="write-btn">리뷰쓰기</button>
+          <button class="delete-btn">삭제</button>
+        </div>
+      </li>
+    </ul>
   </div>
 
-  <!-- Footer 시작 -->
   <footer class="footer-section">
     <div class="footer-inner">
       <div class="footer-logo">
@@ -116,14 +109,9 @@
       </div>
     </div>
   </footer>
-  <!-- Footer 끝 -->
 
-  <!-- fullcalendar CDN -->
-  <script src="mypage.js"></script>
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
-  <script src="calendar.js"></script>
+  <script src="order.js"></script>
   <script src="../main/togglesidebar.js"></script>
   <script src="../main/commonloginlogout.js"></script>
 </body>
-
 </html>

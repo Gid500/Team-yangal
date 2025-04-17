@@ -1,26 +1,3 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById("overlay");
-    const menuBtn = document.getElementById("menuBtn");
-    const isOpen = sidebar.classList.contains("active");
-
-    if (isOpen) {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-    menuBtn.style.display = "block";
-    } else {
-    sidebar.classList.add("active");
-    overlay.classList.add("active");
-    menuBtn.style.display = "none";
-    }
-}
-
-function closeSidebar() {
-    document.getElementById("sidebar").classList.remove("active");
-    document.getElementById("overlay").classList.remove("active");
-    document.getElementById("menuBtn").style.display = "block";
-}
-
 // 배너
 const slides = document.querySelector('.slides');
 const dots = document.querySelectorAll('.dot');
@@ -47,49 +24,7 @@ setInterval(() => {
     moveToSlide(nextIndex);
 }, 4000);
 
-// 로그인, 로그아웃
-document.addEventListener("DOMContentLoaded", function () {
-    const userInfo = document.getElementById("userInfo");
-    const userName = document.getElementById("userName");
-    const loginBtn = document.querySelector(".login-btn");
-    const sidebarLogin = document.getElementById("sidebarLogin");
-    const sidebarMenus = document.querySelectorAll(".sidebar-menu");
-  
-    const storedUser = localStorage.getItem("user");
-  
-    if (storedUser) {
-      const loggedInUser = JSON.parse(storedUser);
-  
-      // 사용자 정보 표시
-      userInfo.style.display = "flex";
-      userName.textContent = `${loggedInUser.userid}님`;
-  
-      // 로그아웃 버튼 설정
-      loginBtn.textContent = "로그아웃";
-      loginBtn.href = "#";
-      loginBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        localStorage.removeItem("user");
-        window.location.href = "main.html";
-      });
-  
-      // 사이드바 로그인 숨기기
-      sidebarLogin.style.display = "none";
-  
-      // 사이드바 메뉴 숨기기
-      sidebarMenus.forEach(menu => menu.style.display = "none");
-  
-      // 사이드바 로그아웃 설정
-      const sidebarLogout = document.getElementById("logoutBtn");
-      sidebarLogout.addEventListener("click", function (e) {
-        e.preventDefault();
-        localStorage.removeItem("user");
-        localStorage.removeItem("isLoggedIn");
-        localStorage.removeItem("loggedInUserId");
-        window.location.href = "main.html";
-      });
-    }
-});
+
   
   
   

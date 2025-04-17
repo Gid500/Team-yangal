@@ -3,7 +3,7 @@ function toggleSidebar() {
     const overlay = document.getElementById("overlay");
     const menuBtn = document.getElementById("menuBtn");
     const isOpen = sidebar.classList.contains("active");
-
+  
     if (isOpen) {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
@@ -14,7 +14,7 @@ function toggleSidebar() {
     menuBtn.style.display = "none";
     }
 }
-
+  
 function closeSidebar() {
     document.getElementById("sidebar").classList.remove("active");
     document.getElementById("overlay").classList.remove("active");

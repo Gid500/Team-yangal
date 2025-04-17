@@ -1,3 +1,4 @@
+// 로그인&로그아웃
 document.addEventListener("DOMContentLoaded", function () {
     const userInfo = document.getElementById("userInfo");
     const userName = document.getElementById("userName");
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loginBtn.addEventListener("click", function (e) {
         e.preventDefault();
         localStorage.removeItem("user");
-        window.location.href = "main.html";
+        window.location.href = "../main/main.html";
       });
   
       // 사이드바 로그인 숨기기
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.removeItem("user");
         localStorage.removeItem("isLoggedIn");
         localStorage.removeItem("loggedInUserId");
-        window.location.href = "main.html";
+        window.location.href = "../main/main.html";
       });
     }
 });

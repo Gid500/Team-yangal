@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>마켓 | VITANTAN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../main/logo.css">
+        <link rel="stylesheet" href="../main/header.css">
+        <link rel="stylesheet" href="../main/footer.css">
+        <link rel="stylesheet" href="market.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="header-left">
+                <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
+                <div class="logo">
+                    <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+                    </a>
+                </div>
+                </div>
+                <div class="header-right">
+                <nav class="nav-menu">
+                    <a href="../vitamin/vitamin.html">VITAMIN</a>
+                    <a href="../todaysnutrients/today.html">오늘의 영양</a>
+                    <a href="market.html">MARKET</a>
+                    <a href="#">COMMUNITY</a>
+                </nav>
+                <a href="../login/login.html" class="login-btn">로그인</a>
+                </div>
+            </div>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header logo">
+                    <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+                
+                    <div class="label">
+                        <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
+                    </div>
+                    <button class="close-btn" onclick="toggleSidebar()">✖</button>
+                </div>
+                <div class="user-info-box" id="userInfo" style="display: none;">
+                    <div class="user-icon">👤</div>
+                    <div class="user-text">
+                        <div class="user-name-row">
+                            <span class="user-name" id="userName"></span>
+                            <button id="logoutBtn" class="logout-btn">로그아웃</button>
+                        </div>
+                        <div class="user-submenu">
+                            <a href="mypage.html">마이페이지</a> 
+                            <a href="#" id="logoutBtn">리뷰</a> 
+                            <a href="#" id="logoutBtn">찜내역/주문내역</a> 
+                            <a href="#" id="logoutBtn">고객센터</a> 
+                        </div>
+                    </div>
+                </div>
+                <a href="main.html" class="sidebar-menu">홈</a>
+                <a href="../q&a/qanda.html" class="sidebar-menu">Q & A</a>
+                <a href="#" class="sidebar-menu">고객센터</a>
+            </div>
+            <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+            <main class="main">
+                <div class="container">
+                    <div class="menu_container" data-filter-id="product_list">
+                        <div class="title"></div>
+                        <div class="menu_header">성분명</div>
+                        <br>
+                        <div class="menu_button_area">
+                            <ul>
+                                <li><button type="button" data-filter="all" class="active">All</button></li>
+                                <li><button type="button" data-filter="vita-b">비타민B</button></li>
+                                <li><button type="button" data-filter="vita-c">비타민C</button></li>
+                                <li><button type="button" data-filter="clc">칼슘</button></li>
+                                <li><button type="button" data-filter="mgnsm">마그네슘</button></li>
+                                <li><button type="button" data-filter="lutein">루테인</button></li>
+                                <li><button type="button" data-filter="vita-a">비타민A</button></li>
+                                <li><button type="button" data-filter="prbtc">프로바이오틱스</button></li>
+                                <li><button type="button" data-filter="zinc">아연</button></li>
+                                <li><button type="button" data-filter="omg3">오메가3</button></li>
+                                <li><button type="button" data-filter="folate">엽산</button></li>
+                                <li><button type="button" data-filter="multi-vita">종합비타민</button></li>
+                                <li><button type="button" data-filter="vita-d">비타민D</button></li>
+                            </ul>
+                        </div><br>
+                    <div class="product-grid">
+                        <div class="product" data-category="vita-b" data-product-id="p001">
+                            <a href="DetailedPage_1.html">
+                                <img src="image1.png" alt="센트롬 에너지b" />
+                            </a>
+                            <div class="product-title">센트룸 에너지B 60정</div>
+                            <div class="product-price">21,340원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="vita-b" data-product-id="p002">
+                            <a href="DetailedPage_2.html">
+                                <img src="image2.png" alt="에너지솔루션" />
+                            </a>
+                            <div class="product-title">에너지솔루션 60정</div>
+                            <div class="product-price">35,100원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="vita-c" data-product-id="p003">
+                            <a href="DetailedPage_3.html">
+                                <img src="image3.png" alt="고려은단 비타민c" />
+                            </a>
+                            <div class="product-title">고려은단 비타민C1000 120정 (4개월분)</div>
+                            <div class="product-price">12,900원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="vita-c" data-product-id="p004">
+                            <a href="DetailedPage_4.html">
+                                <img src="image4.png" alt="이너풀 비타민c" />
+                            </a>
+                            <div class="product-title">지엠팜 이너풀 비타민씨 90포</div>
+                            <div class="product-price">30,000원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="clc mgnsm vita-d" data-product-id="p005">
+                            <a href="DetailedPage_5.html">
+                                <img src="image5.png" alt="더스트롱칼슘" />
+                            </a>
+                            <div class="product-title">지엠팜 더스트롱칼슘 60정</div>
+                            <div class="product-price">25,000원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="clc" data-product-id="p006">
+                            <a href="DetailedPage_6.html">
+                                <img src="image6.png" alt="솔가 츄어블 칼슘" />
+                            </a>
+                            <div class="product-title">솔가 츄어블 칼슘 500mg (120정/4개월)</div>
+                            <div class="product-price">36,400원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="lutein omg3" data-product-id="p007">
+                            <a href="DetailedPage_7.html">
+                                <img src="image7.png" alt="아이클리어 루테인지아잔틴" />
+                            </a>
+                            <div class="product-title">종근당건강 아이클리어 루테인지아잔틴 오메가3 60캡슐</div>
+                            <div class="product-price">23,900원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="lutein" data-product-id="p008">
+                            <a href="DetailedPage_8.html">
+                                <img src="image8.png" alt="아이원 루테인 지아잔틴 미니" />
+                            </a>
+                            <div class="product-title">아이원 루테인 지아잔틴 미니 180캡슐</div>
+                            <div class="product-price">39,700원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="lutein vita-a" data-product-id="p009">
+                            <a href="DetailedPage_9.html">
+                                <img src="image9.png" alt="프로메드 아이프레시" />
+                            </a>
+                            <div class="product-title">프로메드 아이프레시 60캡슐</div>
+                            <div class="product-price">35,100원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="prbtc zinc" data-product-id="p010">
+                            <a href="DetailedPage_10.html">
+                                <img src="image10.png" alt="락토핏 코어" />
+                            </a>
+                            <div class="product-title">락토핏 코어 30포 (1개월분)</div>
+                            <div class="product-price">14,900원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="omg3" data-product-id="p011">
+                            <a href="DetailedPage_11.html">
+                                <img src="image11.png" alt="종근당 프로메가 알티지 오메가3" />
+                            </a>
+                            <div class="product-title">종근당건강 프로메가 알티지 오메가3 듀얼 40 캡슐 (20일분)</div>
+                            <div class="product-price">14,900원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="folate" data-product-id="p012">
+                            <a href="DetailedPage_12.html">
+                                <img src="image12.png" alt="솔가 엽산 400" />
+                            </a>
+                            <div class="product-title">[솔가] 엽산 400 100정</div>
+                            <div class="product-price">18,200원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="mgnsm" data-product-id="p013">
+                            <a href="DetailedPage_13.html">
+                                <img src="image13.png" alt="뉴트리가든 마그네슘 맥스" />
+                            </a>
+                            <div class="product-title">뉴트리가든 마그네슘 맥스 400mg 120정</div>
+                            <div class="product-price">16,900원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="mgnsm clc zinc vita-d" data-product-id="p014">
+                            <a href="DetailedPage_14.html">
+                                <img src="image14.png" alt="GNM 칼슘마그네슘아연비타민d" />
+                            </a>
+                            <div class="product-title">칼슘 마그네슘 아연 비타민D 90정 x 4병</div>
+                            <div class="product-price">46,900원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                        <div class="product" data-category="multi-vita" data-product-id="p015">
+                            <a href="DetailedPage_15.html">
+                                <img src="image15.png" alt="아임비타 멀티비타민 이뮨샷" />
+                            </a>
+                            <div class="product-title">아임비타 멀티비타민 이뮨샷 30병 1박스 (30일분)</div>
+                            <div class="product-price">75,000원</div>
+                            <button class="wishlist-btn">🤍</button>
+                            <button class="cart-btn">장바구니 담기</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer-section">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <a href="main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
+                </div>
+                <div class="footer-text">
+                    <span>㈜VITANTAN</span>
+                    <span>대표이사 : 박김조정 | 주소 : 충청남도 천안시 동남구 대흥동 134</span>
+                    <span>대표번호 : 1234-1234 | Email: vitantan@vita.com</span>
+                    <span>사업자 등록번호 : 123 45 67890</span>
+                    <span>통신판매업신고 : 2025 서울송파 -0000 | 고객센터 : 02-123-4567</span>
+                </div>
+            </div>
+        </footer>
+    </div> 
+    <script src="../main/commonloginlogout.js"></script>
+    <script src="../main/togglesidebar.js"></script>
+    <script src="market.js"></script>
+</body>
+</html>

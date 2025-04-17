@@ -62,13 +62,14 @@
   <!-- 메인 콘텐츠 -->
   <main class="main"> 
     <div class="main">
-      <div class="search-box">
-        <input class="search-txt" type="text" id="searchInput" placeholder="무슨 음식을 먹었나요?" />
-        <button class="search-btn" type="submit" onclick="searchFood()">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+      <div class="search-section">
+        <div class="search-box">
+          <input class="search-txt" type="text" id="searchInput" placeholder="무슨 음식을 먹었나요?" />
+          <button class="search-btn" type="submit" onclick="searchFood()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
       </div>
-
       <div class="container">
         <!-- 음식 검색 결과 -->
         <div class="box" id="searchResults">
@@ -76,8 +77,7 @@
           <div id="foodList"></div>
           <p>(04/13 일)</p>
         </div>
-
-      <!-- 선택된 음식 -->
+        <!-- 선택된 음식 -->
         <div class="box">
           <h4>선택된 음식</h4>
           <div id="selectedFoods"></div>
@@ -87,7 +87,15 @@
 
       <div class="button">
         <button class="analyze-btn">분석하기</button>
-        <button class="analyze-btn"><a href="vitaminchallenge.html"></a>비타민 챌린지</button>
+        <div class="analysis-section" id="analysisSection" style="display: none;">
+          <div class="box">
+            <h4>분석 결과</h4>
+            <p>이곳에 분석 결과가 표시됩니다.</p>
+          </div>
+        </div>
+        <div class="challenge-section">
+          <button class="analyze-btn" onclick="location.href='vitaminchallenge.html'">비타민 챌린지</button>
+        </div>
       </div>
     </div>
   </main>

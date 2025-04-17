@@ -3,7 +3,7 @@ const foodData = {
   'LA갈비': 600,
   '치킨 한마리': 2000,
   '삼겹살(100g)': 320,
-  '김밥': 350,
+  '김밥 한줄': 350,
   '비빔밥': 500
 };
 
@@ -57,3 +57,17 @@ function updateSelectedFoods() {
 
   document.getElementById("totalCalories").innerText = `총칼로리: ${total}kcal`;
 }
+
+/*
+document.querySelector('.analyze-btn').addEventListener('click', () => {
+  document.getElementById('analysisSection').style.display = 'block';
+});
+*/
+document.querySelector('.analyze-btn').addEventListener('click', () => {
+  const analysisSection = document.getElementById('analysisSection');
+  if (analysisSection.style.display === 'block') {
+    analysisSection.style.display = 'none';  // 분석 영역 숨기기
+  } else {
+    analysisSection.style.display = 'block';  // 분석 영역 보이기
+  }
+});

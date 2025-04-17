@@ -11,119 +11,101 @@
   <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
 </head>
 <body>
-  <div class="header">
-    <!-- 왼쪽: 햄버거 + 로고 -->
-    <div class="header-left">
-      <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
-      <div class="logo">
-        <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
-        </a>
-      </div>
-    </div>
-    <!-- 오른쪽: 카테고리 + 로그인 -->
-    <div class="header-right">
-      <nav class="nav-menu">
-        <a href="../vitamin/vitamin.html">VITAMIN</a>
-        <a href="#">오늘의 영양</a>
-        <a href="#">MARKET</a>
-        <a href="#">COMMUNITY</a>
-      </nav>
-      <a href="../login/login.html" class="login-btn">로그인</a>
-    </div>
-  </div>
-
-  <!-- 사이드바 -->
-  <div class="sidebar" id="sidebar">
-  <!-- 사이드바 헤더 (로고 + 햄버거닫기 버튼) -->
-    <div class="sidebar-header logo">
-      <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
-      
-      <div class="label">
-        <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
-      </div>
-      <button class="close-btn" onclick="toggleSidebar()">✖</button>
-    </div>
-
-    <!-- 사용자 정보 영역 -->
-    <div class="user-info-box" id="userInfo" style="display: none;">
-      <div class="user-icon">👤</div>
-      <div class="user-text">
-        <div class="user-name-row">
-          <span class="user-name" id="userName"></span>
-          <button id="logoutBtn" class="logout-btn">로그아웃</button>
-        </div>
-        <div class="user-submenu">
-          <a href="mypage.html">마이페이지</a> 
-          <a href="#" id="logoutBtn">리뷰</a> 
-          <a href="../cart/likes.html" id="logoutBtn">찜내역/주문내역</a> 
-          <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
+        <div class="logo">
+          <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+          </a>
         </div>
       </div>
-    </div>
-    <!-- 메뉴 항목 -->
-    <a href="main.html" class="sidebar-menu">홈</a>
-    <a href="../q&a/qanda.html" class="sidebar-menu">Q & A</a>
-    <a href="../servicecenter/customer.html" class="sidebar-menu">고객센터</a>
-  </div>
-
-  
-  <!-- 오버레이 -->
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-  
-
-  <!-- 여기서 마이페이지 메인 코드 -->
-  <div class="mypage-container">
-
-    <!--  왼쪽: 프로필 + 메뉴 -->
-    <aside class="mypage-sidebar">
-        <div class="profile-section">
-          <!-- 아이콘 -->
-          <div class="profile-icon">👤</div>
-          <!-- 로그인한 ID 이름 -->
-          <div class="profile-name" id="profileName">님</div>
-        </div>
-        <nav class="menu-section">
-          <a href="../cart/likes.html">찜내역</a>
-          <a href="../cart/order.html">주문내역</a>
-          <a href="#">리뷰</a>
-          <a href="#">문의</a>
-          <a href="../servicecenter/customer.html">고객센터</a>
+      <div class="header-right">
+        <nav class="nav-menu">
+          <a href="../vitamin/vitamin.html">VITAMIN</a>
+          <a href="#">오늘의 영양</a>
+          <a href="#">MARKET</a>
+          <a href="#">COMMUNITY</a>
         </nav>
-      </aside>
-      
-    <!--  오른쪽: 달력 -->
-    <main class="mypage-main">
-      <div class="calendar-wrapper">
-        <h1>비타민 다이어리</h1>
-        <div id='calendar'></div>
+        <a href="../login/login.html" class="login-btn">로그인</a>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header logo">
+        <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+        <div class="label">
+          <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+      </div>
+      <div class="user-info-box" id="userInfo" style="display: none;">
+        <div class="user-icon">👤</div>
+          <div class="user-text">
+            <div class="user-name-row">
+              <span class="user-name" id="userName"></span>
+              <button id="logoutBtn" class="logout-btn">로그아웃</button>
+            </div>
+            <div class="user-submenu">
+              <a href="mypage.html">마이페이지</a> 
+              <a href="#" id="logoutBtn">리뷰</a> 
+              <a href="../cart/likes.html" id="logoutBtn">찜내역/주문내역</a> 
+              <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
+            </div>
+          </div>
+        </div>
+        <a href="main.html" class="sidebar-menu">홈</a>
+        <a href="../q&a/qanda.html" class="sidebar-menu">Q & A</a>
+        <a href="../servicecenter/customer.html" class="sidebar-menu">고객센터</a>
+      </div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    
+    <main class="main"> 
+      <div class="mypage-container">
+        <aside class="mypage-sidebar">
+          <div class="profile-section">
+            <!-- 아이콘 -->
+            <div class="profile-icon">👤</div>
+            <!-- 로그인한 ID 이름 -->
+            <div class="profile-name" id="profileName">님</div>
+          </div>
+          <nav class="menu-section">
+            <a href="../cart/likes.html">찜내역</a>
+            <a href="../cart/order.html">주문내역</a>
+            <a href="#">리뷰</a>
+            <a href="#">문의</a>
+            <a href="../servicecenter/customer.html">고객센터</a>
+          </nav>
+        </aside>
+        
+        <!-- 달력 -->
+        <main class="mypage-main">
+          <div class="calendar-wrapper">
+            <h1>비타민 다이어리</h1>
+            <div id='calendar'></div>
+          </div>
+        </main>
       </div>
     </main>
-  
+
+    <footer class="footer-section">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <a href="main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
+        </div>
+        <div class="footer-text">
+          <span>㈜VITANTAN</span>
+          <span>대표이사 : 박김조정 | 주소 : 충청남도 천안시 동남구 대흥동 134</span>
+          <span>대표번호 : 1234-1234 | Email: vitantan@vita.com</span>
+          <span>사업자 등록번호 : 123 45 67890</span>
+          <span>통신판매업신고 : 2025 서울송파 -0000 | 고객센터 : 02-123-4567</span>
+        </div>
+      </div>
+    </footer>
   </div>
-
-  <!-- Footer 시작 -->
-  <footer class="footer-section">
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <a href="main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
-      </div>
-      <div class="footer-text">
-        <span>㈜VITANTAN</span>
-        <span>대표이사 : 박김조정 | 주소 : 충청남도 천안시 동남구 대흥동 134</span>
-        <span>대표번호 : 1234-1234 | Email: vitantan@vita.com</span>
-        <span>사업자 등록번호 : 123 45 67890</span>
-        <span>통신판매업신고 : 2025 서울송파 -0000 | 고객센터 : 02-123-4567</span>
-      </div>
-    </div>
-  </footer>
-  <!-- Footer 끝 -->
-
-  <!-- fullcalendar CDN -->
   <script src="mypage.js"></script>
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
   <script src="calendar.js"></script>
   <script src="../main/togglesidebar.js"></script>
   <script src="../main/commonloginlogout.js"></script>
 </body>
-
 </html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>찜내역</title>
+  <meta charset="UTF-8">
+  <title>오늘의 영양</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../main/logo.css">
   <link rel="stylesheet" href="../main/header.css">
   <link rel="stylesheet" href="../main/footer.css">
-  <link rel="stylesheet" href="likes.css" />
+  <link rel="stylesheet" href="todays.css">
 </head>
 <body>
   <div class="wrapper">
@@ -15,14 +15,14 @@
       <div class="header-left">
         <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
         <div class="logo">
-          <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+          <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
           </a>
         </div>
       </div>
       <div class="header-right">
         <nav class="nav-menu">
           <a href="../vitamin/vitamin.html">VITAMIN</a>
-          <a href="../todaysnutrients/today.html">오늘의 영양</a>
+          <a href="#">오늘의 영양</a>
           <a href="#">MARKET</a>
           <a href="#">COMMUNITY</a>
         </nav>
@@ -32,7 +32,7 @@
     <div class="sidebar" id="sidebar">
       <div class="sidebar-header logo">
         <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
-          
+        
         <div class="label">
           <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
         </div>
@@ -48,48 +48,53 @@
           <div class="user-submenu">
             <a href="../mypage/mypage.html">마이페이지</a> 
             <a href="#" id="logoutBtn">리뷰</a> 
-            <a href="../cart/likes.html" id="logoutBtn">찜내역/주문내역</a> 
-            <a href="customer.html" id="logoutBtn">고객센터</a> 
+            <a href="likes.html" id="logoutBtn">찜내역/주문내역</a> 
+            <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
           </div>
         </div>
       </div>
-        <a href="main.html" class="sidebar-menu">홈</a>
-        <a href="#" class="sidebar-menu">Q & A</a>
-        <a href="customer.html" class="sidebar-menu">고객센터</a>
+      <a href="main.html" class="sidebar-menu">홈</a>
+      <a href="#" class="sidebar-menu">Q & A</a>
+      <a href="../servicecenter/customer.html" class="sidebar-menu">고객센터</a>
     </div>
-      
-    <main class="main"> 
-      <div class="container">
-        <h2 class="page-title">내가 찜한 제품들</h2>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
-        <div class="tab-buttons">
-          <button class="active">찜</button>
-          <button onclick="location.href='order.html'">주문내역</button>
+  <!-- 메인 콘텐츠 -->
+  <main class="main"> 
+    <div class="main">
+      <div class="search-box">
+        <input class="search-txt" type="text" id="searchInput" placeholder="무슨 음식을 먹었나요?" />
+        <button class="search-btn" type="submit" onclick="searchFood()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="container">
+        <!-- 음식 검색 결과 -->
+        <div class="box" id="searchResults">
+          <h4>음식 리스트</h4>
+          <div id="foodList"></div>
+          <p>(04/13 일)</p>
         </div>
 
-        <ul class="wishlist">
-          <li class="wishlist-item">
-            <div class="item-image">이미지</div>
-            <div class="item-details">
-              <p class="item-company">만든회사</p>
-              <p class="item-name">상품명</p>
-              <p class="item-review">⭐ 4.7 | 1,212개 리뷰</p>
-              <p class="item-price">15,000원</p>
-            </div>
-            <div class="item-actions">
-              <input type="number" class="quantity" min="1" value="1" />
-              <button class="buy-btn">구매하기</button>
-              <button class="remove-btn">삭제</button>
-            </div>
-          </li>
-        </ul>
+      <!-- 선택된 음식 -->
+        <div class="box">
+          <h4>선택된 음식</h4>
+          <div id="selectedFoods"></div>
+          <div class="total" id="totalCalories">총칼로리: 0kcal</div>
+        </div>
       </div>
-    </main>
-  
+
+      <div class="button">
+        <button class="analyze-btn">분석하기</button>
+        <button class="analyze-btn"><a href="vitaminchallenge.html"></a>비타민 챌린지</button>
+      </div>
+    </div>
+  </main>
     <footer class="footer-section">
       <div class="footer-inner">
         <div class="footer-logo">
-          <a href="main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
+          <a href="../main/main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
         </div>
         <div class="footer-text">
           <span>㈜VITANTAN</span>
@@ -101,7 +106,8 @@
       </div>
     </footer>
   </div>
-  <script src="likes.js"></script>
+
+  <script src="todays.js"></script>
   <script src="../main/togglesidebar.js"></script>
   <script src="../main/commonloginlogout.js"></script>
 </body>

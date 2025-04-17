@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;              
+    flex-direction: column;     
+    min-height: 100vh;
+}
+  
+  
+/* 메인 영역 */
+.main {
+    margin-top: 80px; /* 또는 padding-top: 80px */
+    padding: 40px;
+    flex-grow: 1;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+  
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.search-box {
+    display: flex;
+    justify-self: center;
+    background:white;
+    border-radius: 15px;
+    padding:3px;
+    border:2px solid #1acf38;
+    margin-bottom: 20px;
+}
+  
+.search-txt{
+    border:none;
+    background:none;
+    outline:none;
+    float:left;
+    padding:0px;
+    color:#797979;
+    font-size: 17px;
+    line-height: 30px;
+    width:200px;
+}
+  
+.search-btn{
+    color:#070707;
+    border-radius: 10px;
+    background:white;
+    border:none;
+    font-size:25px;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+}
+  
+.search-btn:hover{
+    color:#1acf38;
+}
+  
+.box {
+    border: 1px solid;
+    padding: 16px;
+    width: 250px;
+    border-radius: 10px;
+}
+  
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+  
+.btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+}
+  
+.btn:hover {
+    background-color: #bbb;
+}
+  
+.total {
+    margin-top: 10px;
+    font-weight: bold;
+}
+  
+  
+.button {
+    display:flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.analyze-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #eee;
+    border: 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    float: center;
+}
+  
+.analyze-btn:hover {
+    background-color: #ddd;
+}
+  

@@ -2,13 +2,12 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>VITANTAN 메뉴</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>비타민 카테고리별 전체 목록</title>
+  <link rel="stylesheet" href="vitamin.css" />
   <link rel="stylesheet" href="../main/logo.css">
   <link rel="stylesheet" href="../main/header.css">
   <link rel="stylesheet" href="../main/footer.css">
-  <link rel="stylesheet" href="mypage.css">
-  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
 </head>
 <body>
   <div class="header">
@@ -36,7 +35,7 @@
   <div class="sidebar" id="sidebar">
   <!-- 사이드바 헤더 (로고 + 햄버거닫기 버튼) -->
     <div class="sidebar-header logo">
-      <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+      <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
       
       <div class="label">
         <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
@@ -53,7 +52,7 @@
           <button id="logoutBtn" class="logout-btn">로그아웃</button>
         </div>
         <div class="user-submenu">
-          <a href="mypage.html">마이페이지</a> 
+          <a href="../mypage/mypage.html">마이페이지</a> 
           <a href="#" id="logoutBtn">리뷰</a> 
           <a href="#" id="logoutBtn">찜내역/주문내역</a> 
           <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
@@ -61,51 +60,33 @@
       </div>
     </div>
     <!-- 메뉴 항목 -->
-    <a href="main.html" class="sidebar-menu">홈</a>
+    <a href="../main/main.html" class="sidebar-menu">홈</a>
     <a href="../q&a/qanda.html" class="sidebar-menu">Q & A</a>
     <a href="../servicecenter/customer.html" class="sidebar-menu">고객센터</a>
   </div>
 
-  
-  <!-- 오버레이 -->
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-  
+  <main class="vitamin-container">
+    <h2 class="title">비타민 성분 전체 목록 (카테고리별)</h2>
+    <div id="vitaminList" class="vitamin-list"></div>
+  </main>
 
-  <!-- 여기서 마이페이지 메인 코드 -->
-  <div class="mypage-container">
-
-    <!--  왼쪽: 프로필 + 메뉴 -->
-    <aside class="mypage-sidebar">
-        <div class="profile-section">
-          <!-- 아이콘 -->
-          <div class="profile-icon">👤</div>
-          <!-- 로그인한 ID 이름 -->
-          <div class="profile-name" id="profileName">님</div>
-        </div>
-        <nav class="menu-section">
-          <a href="#">주문내역</a>
-          <a href="#">찜내역</a>
-          <a href="#">리뷰</a>
-          <a href="#">문의</a>
-          <a href="../servicecenter/customer.html">고객센터</a>
-        </nav>
-      </aside>
-      
-    <!--  오른쪽: 달력 -->
-    <main class="mypage-main">
-      <div class="calendar-wrapper">
-        <h1>비타민 다이어리</h1>
-        <div id='calendar'></div>
-      </div>
-    </main>
-  
+  <!-- 모달 -->
+  <div id="descModal" class="desc-modal">
+    <div class="desc-modal-content">
+      <span id="descClose" class="desc-close">&times;</span>
+      <h3 id="descTitle"></h3>
+      <img id="descImage" src="" alt="" />
+      <p id="descText"></p>
+      <p id="descRDA"></p>
+      <a id="descLink" href="#" target="_blank">자세히 보기</a>
+    </div>
   </div>
 
   <!-- Footer 시작 -->
   <footer class="footer-section">
     <div class="footer-inner">
       <div class="footer-logo">
-        <a href="main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
+        <a href="../main/main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
       </div>
       <div class="footer-text">
         <span>㈜VITANTAN</span>
@@ -118,12 +99,9 @@
   </footer>
   <!-- Footer 끝 -->
 
-  <!-- fullcalendar CDN -->
-  <script src="mypage.js"></script>
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
-  <script src="calendar.js"></script>
-
+  <script src="vitamin.js"></script>
   <script src="../login/logout.js"></script>
+  <script src="../main/togglesidebar.js"></script>
+  <script src="../main/sidebarlogout.js"></script>
 </body>
-
 </html>

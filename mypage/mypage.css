@@ -12,7 +12,6 @@
     background-color: #f7f7f7;
     border-radius: 10px;
     padding: 30px 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,6 +53,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top:100px;
     margin-bottom: 30px;
 }
   
@@ -63,7 +63,7 @@
 }
   
 .profile-name {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     color: #333;
 }
@@ -83,8 +83,8 @@
 .menu-section a {
     text-decoration: none;
     color: #333;
-    font-size: 15px;
-    padding: 8px 12px;
+    font-size:20px;
+    padding: 10px 20px;
     border-radius: 6px;
     transition: background-color 0.2s;
   }

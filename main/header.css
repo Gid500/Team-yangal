@@ -33,6 +33,60 @@
     z-index: 1005;
 }
 
+/* 카테고리 메뉴 */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #6fcf97; /* 밝은 초록색 */
+}
+
+/* 로그인 버튼 */
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    text-decoration: none; /* 밑줄 제거 */
+    border:none;
+    font-size:18px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 36px;
+    transition: color 0.3s ease;
+}
+/* 로그인 링크 */
+.simple-link {
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  
+  .simple-link:hover {
+    color: white;
+    background: none;
+}
+.login-btn:hover{
+    color: #6fcf97;
+}
 
 .sidebar {
     position: fixed;
@@ -116,6 +170,8 @@ border-top: 1px dashed #ccc;
     padding: 100px 20px 20px;
 }
 
+
+
 .user-info-box {
     display: flex;
     flex-direction: column;
@@ -125,6 +181,7 @@ border-top: 1px dashed #ccc;
     padding: 15px;
     margin: 10px;
     text-align: center;
+    font-size:larger;
 }
 
 .user-icon {
@@ -141,7 +198,7 @@ border-top: 1px dashed #ccc;
   
 .user-name {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     color: #333;
 }
   
@@ -160,7 +217,7 @@ border-top: 1px dashed #ccc;
     margin-bottom: 8px;
 }
 .logout-btn {
-    font-size: 12px;
+    font-size: 16px;
     background-color: transparent;
     border: none;
     color: #666;
@@ -180,7 +237,7 @@ border-top: 1px dashed #ccc;
 }
   
 .user-submenu {
-    font-size: 12px;
+    font-size: 18px;
     color: #666;
 }
   
@@ -193,58 +250,3 @@ border-top: 1px dashed #ccc;
     text-decoration: underline;
 }
   
-
-/* 로그인 링크 */
-.simple-link {
-    background: none;
-    padding: 0;
-    margin: 0;
-    color: black;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 14px;
-  }
-  
-  .simple-link:hover {
-    color: white;
-    background: none;
-}
-/* 카테고리 메뉴 */
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.nav-menu a {
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.2s ease;
-}
-
-.nav-menu a:hover {
-    color: #6fcf97; /* 밝은 초록색 */
-}
-/* 로그인 버튼 */
-.login-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    color: white;
-    text-decoration: none; /* 밑줄 제거 */
-    border:none;
-    font-size:small;
-    padding: 8px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-    height: 36px;
-    transition: color 0.3s ease;
-}
-
-.login-btn:hover{
-    color: #6fcf97;
-}

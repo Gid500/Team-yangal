@@ -32,11 +32,20 @@
     color: white;
   }
   
-  .wishlist {
+  .wishlist{
     list-style: none;
-    padding: 0;
+    padding: 20px;
   }
-  
+
+  .order-list{
+    border: solid;
+    list-style-type: none;
+  }
+
+  .item-actions{
+    padding: 20px;
+  }
+
   .wishlist-item {
     display: flex;
     justify-content: space-between;

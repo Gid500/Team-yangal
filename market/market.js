@@ -62,7 +62,7 @@ const initCart = () => {
       const product = btn.closest('.product');
       const productId = product.getAttribute('data-product-id');
 
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let cart = JSON.parse(localStorage.getItem('orderlist')) || [];
 
       if (!cart.includes(productId)) {
         cart.push(productId);
@@ -71,7 +71,7 @@ const initCart = () => {
         alert('이미 장바구니에 있는 상품입니다.');
       }
 
-      localStorage.setItem('cart', JSON.stringify(cart));
+      localStorage.setItem('orderlist', JSON.stringify(orderlist));
     });
   });
 };

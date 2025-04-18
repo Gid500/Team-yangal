@@ -49,6 +49,9 @@ const initWishlist = () => {
   });
 };
 
+
+
+
 initWishlist();
 //장바구니
 const initCart = () => {
@@ -74,3 +77,4 @@ const initCart = () => {
 };
 
 initCart();
+

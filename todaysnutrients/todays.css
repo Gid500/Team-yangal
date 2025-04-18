@@ -17,11 +17,7 @@ body {
     align-items: center;
 }
   
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
+
 
 .search-section {
     display: flex;
@@ -61,7 +57,13 @@ body {
 .search-btn:hover{
     color:#1acf38;
 }
-  
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .box {
     border: 1px solid #ccc;
     padding: 24px;

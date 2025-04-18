@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../main/logo.css">
   <link rel="stylesheet" href="../main/header.css">
   <link rel="stylesheet" href="../main/footer.css">
-  <link rel="stylesheet" href="order.css" />
+  <link rel="stylesheet" href="likesorders.css" />
 </head>
 <body>
   <div class="wrapper">
@@ -22,8 +22,8 @@
       <div class="header-right">
         <nav class="nav-menu">
           <a href="../vitamin/vitamin.html">VITAMIN</a>
-          <a href="#">오늘의 영양</a>
-          <a href="#">MARKET</a>
+          <a href="../todaysnutrients/today.html">오늘의 영양</a>
+          <a href="../market/market.html">MARKET</a>
           <a href="#">COMMUNITY</a>
         </nav>
         <a href="../login/login.html" class="login-btn">로그인</a>
@@ -68,19 +68,12 @@
           <button class="active" onclick="location.href='order.html'">주문내역</button>
         </div>
 
-        <ul class="order-list">
-          <li class="list-item order-item">
-            <div class="item-image">이미지</div>
-            <div class="item-details">
-              <p class="item-company">만든회사</p>
-              <p class="item-name">상품명</p>
-              <p class="item-review">⭐ 4.7 | 1,212개 리뷰</p>
-              <p class="item-price">15,000원</p>
-              <p class="item-status">배송상태: 배송중</p>
-            </div>
+        <ul class="wishlist">
+          <li class="wishlist-item">
             <div class="item-actions">
-              <button class="write-btn">리뷰쓰기</button>
-              <button class="delete-btn">삭제</button>
+              <input type="number" class="quantity" min="1" value="1" />
+              <button class="buy-btn">리뷰쓰기</button>
+              <button class="remove-btn">삭제</button>
             </div>
           </li>
         </ul>

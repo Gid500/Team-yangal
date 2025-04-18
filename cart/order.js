@@ -106,12 +106,12 @@ const products = [
 ];
 
 
-function renderWishlist() {
-  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-  const container = document.querySelector(".wishlist");
+function renderOrderlist() {
+  const orderlist = JSON.parse(localStorage.getItem('orderlist')) || [];
+  const container = document.querySelector(".orderlist");
 
   // 찜한 상품만 필터링
-  const filtered = products.filter(p => wishlist.includes(p.id));
+  const filtered = products.filter(p => orderlist.includes(p.id));
 
   // 찜한 상품이 없을 경우
   if (filtered.length === 0) {
@@ -123,7 +123,7 @@ function renderWishlist() {
   container.innerHTML = ''; // 기존 항목 제거
   filtered.forEach(p => {
     const li = document.createElement('li');
-    li.className = 'wishlist-item';
+    li.className = 'orderlist-item';
     li.innerHTML = `
       <div class="item-image"><img src="${p.image}" alt="${p.name}" /></div>
       <div class="item-details">
@@ -132,7 +132,7 @@ function renderWishlist() {
       </div>
       <div class="item-actions">
         <input type="number" class="quantity" min="1" value="1" />
-        <button class="buy-btn">구매하기</button>
+        <button class="buy-btn">리뷰쓰기</button>
         <button class="remove-btn" data-id="${p.id}">삭제</button>
       </div>
     `;
@@ -153,12 +153,12 @@ function bindButtons() {
         const productId = btn.getAttribute("data-id");
 
         // localStorage에서 제거
-        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-        wishlist = wishlist.filter(id => id !== productId);
-        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        let orderlist = JSON.parse(localStorage.getItem("orderlist")) || [];
+        orderlist = orderlist.filter(id => id !== productId);
+        localStorage.setItem("orderlist", JSON.stringify(wishlist));
 
         // 화면에서 제거
-        btn.closest(".wishlist-item").remove();
+        btn.closest(".orderlist-item").remove();
 
         alert("상품이 삭제되었습니다.");
       }

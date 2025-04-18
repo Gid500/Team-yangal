@@ -82,7 +82,11 @@ const products = [
     id: 'p010',
     name: '락토핏 코어 30포 (1개월분)',
     price: 14900,
+<<<<<<< HEAD
+    imimage2.png',
+=======
     image: '../market/images/image10.png',
+>>>>>>> d05387e7c5aeb99765ab9ce7023c5fa548096e3c
   },
   {
     id: 'p011',
@@ -136,9 +140,13 @@ function renderWishlist() {
     const li = document.createElement('li');
     li.className = 'wishlist-item';
     li.innerHTML = `
+<<<<<<< HEAD
+      <div class="item-image"><img style="width: 80px; height: 80px" src="${p.image}" alt="${p.name}" /></div>
+=======
       <div class="item-image">
         <img style="width: 80px; height: 80px" src="${p.image}" alt="${p.name}" />
       </div>
+>>>>>>> d05387e7c5aeb99765ab9ce7023c5fa548096e3c
       <div class="item-details">
         <p class="item-name">${p.name}</p>
         <p class="item-price">${p.price.toLocaleString()}원</p>

@@ -144,8 +144,6 @@ function renderWishlist() {
         <p class="item-price">${p.price.toLocaleString()}원</p>
       </div>
       <div class="item-actions">
-        <input type="number" class="quantity" min="1" value="1" />
-        <button class="buy-btn">구매하기</button>
         <button class="remove-btn" data-id="${p.id}">삭제</button>
       </div>
     `;

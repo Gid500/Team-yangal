@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>주문내역</title>
+  <title>카트목록</title>
   <link rel="stylesheet" href="../main/logo.css">
   <link rel="stylesheet" href="../main/header.css">
   <link rel="stylesheet" href="../main/footer.css">
@@ -48,7 +48,7 @@
           <div class="user-submenu">
             <a href="../mypage/mypage.html">마이페이지</a> 
             <a href="#" id="logoutBtn">리뷰</a> 
-            <a href="../cart/likes.html" id="logoutBtn">찜내역/주문내역</a> 
+            <a href="../cart/likes.html" id="logoutBtn">찜내역/카트목록</a> 
             <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
           </div>
         </div>
@@ -61,18 +61,18 @@
 
     <main class="main"> 
       <div class="container">
-        <h2 class="page-title">주문내역</h2>
+        <h2 class="page-title">카트목록</h2>
 
         <div class="tab-buttons">
           <button onclick="location.href='likes.html'">찜</button>
-          <button class="active" onclick="location.href='order.html'">주문내역</button>
+          <button class="active" onclick="location.href='order.html'">카트목록</button>
         </div>
 
-        <ul class="order-list">
-          <li class="order-item">
+        <ul class="cart">
+          <li class="cart-item">
             <div class="item-actions">
               <input type="number" class="quantity" min="1" value="1" />
-              <button class="buy-btn">리뷰쓰기</button>
+              <button class="buy-btn">구매하기</button>
               <button class="remove-btn">삭제</button>
             </div>
           </li>

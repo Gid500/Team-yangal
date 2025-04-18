@@ -1,4 +1,4 @@
-// order.js
+// cart.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const deleteBtns = document.querySelectorAll(".delete-btn");
@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   deleteBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      const confirmDelete = confirm("이 항목을 주문내역에서 삭제하시겠습니까?");
+      const confirmDelete = confirm("이 항목을 카트목록에서 삭제하시겠습니까?");
       if (confirmDelete) {
-        const item = btn.closest(".order-item");
+        const item = btn.closest(".cart-item");
         item.remove();
         alert("주문 항목이 삭제되었습니다.");
       }
@@ -106,16 +106,16 @@ const products = [
 ];
 
 
-function renderOrderlist() {
-  const orderlist = JSON.parse(localStorage.getItem('orderlist')) || [];
-  const container = document.querySelector(".orderlist");
+function renderCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const container = document.querySelector(".cart");
 
   // 찜한 상품만 필터링
-  const filtered = products.filter(p => orderlist.includes(p.id));
+  const filtered = products.filter(p => cart.includes(p.id));
 
   // 찜한 상품이 없을 경우
   if (filtered.length === 0) {
-    container.innerHTML = '<li>찜한 상품이 없습니다.</li>';
+    container.innerHTML = '<li>카트에 담은 상품이 없습니다.</li>';
     return;
   }
 
@@ -123,7 +123,7 @@ function renderOrderlist() {
   container.innerHTML = ''; // 기존 항목 제거
   filtered.forEach(p => {
     const li = document.createElement('li');
-    li.className = 'orderlist-item';
+    li.className = 'cart-item';
     li.innerHTML = `
       <div class="item-image"><img src="${p.image}" alt="${p.name}" /></div>
       <div class="item-details">
@@ -132,7 +132,7 @@ function renderOrderlist() {
       </div>
       <div class="item-actions">
         <input type="number" class="quantity" min="1" value="1" />
-        <button class="buy-btn">리뷰쓰기</button>
+        <button class="buy-btn">구매하기</button>
         <button class="remove-btn" data-id="${p.id}">삭제</button>
       </div>
     `;
@@ -144,21 +144,21 @@ function renderOrderlist() {
 
 function bindButtons() {
   const removeBtns = document.querySelectorAll(".remove-btn");
-  const reviewBtns = document.querySelectorAll(".review-btn");
+  const buyBtns = document.querySelectorAll(".buy-btn");
 
   removeBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      const confirmed = confirm("이 상품을 주문내역에서 삭제하시겠습니까?");
+      const confirmed = confirm("이 상품을 카트 목록에서 삭제하시겠습니까?");
       if (confirmed) {
         const productId = btn.getAttribute("data-id");
 
         // localStorage에서 제거
-        let orderlist = JSON.parse(localStorage.getItem("orderlist")) || [];
-        orderlist = orderlist.filter(id => id !== productId);
-        localStorage.setItem("orderlist", JSON.stringify(wishlist));
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart = cart.filter(id => id !== productId);
+        localStorage.setItem("cart", JSON.stringify(cart));
 
         // 화면에서 제거
-        btn.closest(".orderlist-item").remove();
+        btn.closest(".cart-item").remove();
 
         alert("상품이 삭제되었습니다.");
       }
@@ -175,5 +175,5 @@ function bindButtons() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderWishlist();
+  renderCart();
 });

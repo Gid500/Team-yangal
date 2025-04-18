@@ -48,7 +48,7 @@
                         <div class="user-submenu">
                             <a href="../mypage/mypage.html">마이페이지</a> 
                             <a href="#" id="logoutBtn">리뷰</a> 
-                            <a href="../cart/likes.html" id="logoutBtn">찜내역/주문내역</a> 
+                            <a href="../cart/likes.html" id="logoutBtn">찜내역/카트목록</a> 
                             <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
                         </div>
                     </div>
@@ -80,6 +80,9 @@
                                 <li><button type="button" data-filter="multi-vita">종합비타민</button></li>
                                 <li><button type="button" data-filter="vita-d">비타민D</button></li>
                             </ul>
+                            <div class="search-container">
+                                <input type="text" id="searchInput" placeholder="제품명을 입력하세요" />
+                            </div>
                         </div><br>
                     <div class="product-grid">
                         <div class="product" data-category="vita-b" data-product-id="p001">
@@ -239,5 +242,6 @@
     <script src="../main/commonloginlogout.js"></script>
     <script src="../main/togglesidebar.js"></script>
     <script src="market.js"></script>
+    <script src="marketsearch.js"></script>
 </body>
 </html>

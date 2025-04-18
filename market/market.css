@@ -123,3 +123,18 @@ body {
     background: #222;
     color: #fff;
 }
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    padding-right: 1rem; /* 우측 여백 조정 */
+}
+
+#searchInput {
+    width: 270px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}

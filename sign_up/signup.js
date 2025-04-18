@@ -13,7 +13,6 @@ getElementById("signup-form")
     }
 
     const user = {
-        type: 'user',
         name: name,
         username: newid,
         password: newpw,

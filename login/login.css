@@ -1,0 +1,80 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    line-height: 300%;
+}
+
+.input-wrapper {
+    width: 350px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-line {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-line label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-line input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loginbtn {
+    padding: 10px;
+    background-color: #FFC456;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.loginbtn:hover {
+    background-color: #e6af3f;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.flex-row span a, .flex-row a {
+    color: #333;
+    text-decoration: none;
+}
+
+.flex-row span a:hover, .flex-row a:hover {
+    text-decoration: underline;
+}

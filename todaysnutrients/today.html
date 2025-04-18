@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오늘의 영양</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../main/logo.css">
+  <link rel="stylesheet" href="../main/header.css">
+  <link rel="stylesheet" href="../main/footer.css">
+  <link rel="stylesheet" href="todays.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
+        <div class="logo">
+          <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+          </a>
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="nav-menu">
+          <a href="../vitamin/vitamin.html">VITAMIN</a>
+          <a href="today.html">오늘의 영양</a>
+          <a href="../market/market.html">MARKET</a>
+          <a href="#">COMMUNITY</a>
+        </nav>
+        <a href="../login/login.html" class="login-btn">로그인</a>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header logo">
+        <a href="main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+        
+        <div class="label">
+          <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+      </div>
+      <div class="user-info-box" id="userInfo" style="display: none;">
+        <div class="user-icon">👤</div>
+        <div class="user-text">
+          <div class="user-name-row">
+            <span class="user-name" id="userName"></span>
+            <button id="logoutBtn" class="logout-btn">로그아웃</button>
+          </div>
+          <div class="user-submenu">
+            <a href="../mypage/mypage.html">마이페이지</a> 
+            <a href="#" id="logoutBtn">리뷰</a> 
+            <a href="likes.html" id="logoutBtn">찜내역/주문내역</a> 
+            <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
+          </div>
+        </div>
+      </div>
+      <a href="main.html" class="sidebar-menu">홈</a>
+      <a href="#" class="sidebar-menu">Q & A</a>
+      <a href="../servicecenter/customer.html" class="sidebar-menu">고객센터</a>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main"> 
+    <div class="main">
+      <div class="search-section">
+        <div class="search-box">
+          <input class="search-txt" type="text" id="searchInput" placeholder="무슨 음식을 먹었나요?" />
+          <button class="search-btn" type="submit" onclick="searchFood()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <!-- 음식 검색 결과 -->
+        <div class="box" id="searchResults">
+          <h4>음식 리스트</h4>
+          <div id="foodList"></div>
+        </div>
+        <!-- 선택된 음식 -->
+        <div class="box">
+          <h4>선택된 음식</h4>
+          <div id="selectedFoods"></div>
+          <div class="total" id="totalCalories">총칼로리: 0kcal</div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="analyze-btn">분석하기</button>
+        <div class="analysis-section" id="analysisSection" style="display: none;">
+          <div class="box">
+            <h4>분석 결과</h4>
+            <p>이곳에 분석 결과가 표시됩니다.</p>
+          </div>
+        </div>
+        <div class="challenge-section">
+          <button class="analyze-btn" onclick="location.href='vitaminchallenge.html'">비타민 챌린지</button>
+        </div>
+      </div>
+    </div>
+  </main>
+    <footer class="footer-section">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <a href="../main/main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
+        </div>
+        <div class="footer-text">
+          <span>㈜VITANTAN</span>
+          <span>대표이사 : 박김조정 | 주소 : 충청남도 천안시 동남구 대흥동 134</span>
+          <span>대표번호 : 1234-1234 | Email: vitantan@vita.com</span>
+          <span>사업자 등록번호 : 123 45 67890</span>
+          <span>통신판매업신고 : 2025 서울송파 -0000 | 고객센터 : 02-123-4567</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="todays.js"></script>
+  <script src="../main/togglesidebar.js"></script>
+  <script src="../main/commonloginlogout.js"></script>
+</body>
+</html>

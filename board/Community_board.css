@@ -1,0 +1,47 @@
+/* 이중 flex 중앙정렬 */
+.write-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    height: 700px;
+}
+.write-container{
+    display: flex;
+    justify-content:center;
+}
+
+.community-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    height: 600px;
+}
+.community-board{
+    display: flex;
+    justify-content:center;
+}
+/*  */
+
+.write-btn-flex{
+    display: flex;
+    justify-content: flex-end;
+}
+.write-form div label{
+    display: block;
+}
+textarea{
+    resize: none;
+}
+
+#write-title{
+    width: 100%;
+}
+#content{
+    width: 100%;
+    height: 200px;
+}
+
+#write-btn{
+    width: 90px;
+}

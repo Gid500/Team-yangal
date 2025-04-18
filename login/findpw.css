@@ -1,0 +1,131 @@
+/* 기본 설정 */
+* 
+{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+  
+/* 폼 레이아웃 */
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.input-wrapper {
+    width: 380px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+  
+/* 로고 */
+.logo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 입력 영역 */
+.login-line {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.login-line label {
+  font-weight: bold;
+}
+.login-line input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 버튼 */
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFC456;
+  color: black;
+  text-decoration: none;
+  border: none;
+  font-size: small;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 36px;
+  transition: color 0.3s ease;
+}
+.login-btn:hover {
+  color: #6fcf97;
+}
+
+/* 텍스트 링크 */
+.flex-row {
+  text-align: center;
+  font-size: 14px;
+}
+.flex-row a {
+  color: #333;
+  text-decoration: none;
+}
+.flex-row a:hover {
+  text-decoration: underline;
+}
+
+/* 팝업 */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.popup.active {
+  display: flex;
+}
+.popup-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+/* 가로로 정렬되는 입력+버튼 묶음 */
+.row-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.row-group input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.row-group .login-btn {
+  height: 40px;
+  white-space: nowrap;
+}

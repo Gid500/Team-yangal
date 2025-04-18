@@ -124,7 +124,11 @@ function renderWishlist() {
     const li = document.createElement('li');
     li.className = 'wishlist-item';
     li.innerHTML = `
+<<<<<<< HEAD
       <div class="item-image"><img src="${p.image}" alt="${p.name}" /></div>
+=======
+      <div class="item-image"><img src="${p.img}" alt="${p.name}" /></div>
+>>>>>>> origin/T2
       <div class="item-details">
         <p class="item-name">${p.name}</p>
         <p class="item-price">${p.price.toLocaleString()}원</p>

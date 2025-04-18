@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+/*바디*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+}
+
+
+>>>>>>> origin/T2
 .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -113,6 +125,7 @@
 .menu_button_area ul li button.active {
     background: #222;
     color: #fff;
+<<<<<<< HEAD
 }
 
 .search-container {
@@ -130,3 +143,6 @@
     font-size: 1rem;
   }
   
+=======
+}
+>>>>>>> origin/T2

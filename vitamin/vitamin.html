@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>비타민 카테고리별 전체 목록</title>
+  <link rel="stylesheet" href="vitamin.css" />
+  <link rel="stylesheet" href="../main/logo.css">
+  <link rel="stylesheet" href="../main/header.css">
+  <link rel="stylesheet" href="../main/footer.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
+        <div class="logo">
+          <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+          </a>
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="nav-menu">
+          <a href="vitamin.html">VITAMIN</a>
+          <a href="../todaysnutrients/today.html">오늘의 영양</a>
+          <a href="../market/market.html">MARKET</a>
+          <a href="#">COMMUNITY</a>
+        </nav>
+        <a href="../login/login.html" class="login-btn">로그인</a>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header logo">
+        <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+        <div class="label">
+          <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+      </div>
+      <div class="user-info-box" id="userInfo" style="display: none;">
+        <div class="user-icon">👤</div>
+        <div class="user-text">
+          <div class="user-name-row">
+            <span class="user-name" id="userName"></span>
+            <button id="logoutBtn" class="logout-btn">로그아웃</button>
+          </div>
+          <div class="user-submenu">
+            <a href="../mypage/mypage.html">마이페이지</a> 
+            <a href="#" id="logoutBtn">리뷰</a> 
+            <a href="../cart/likes.html" id="logoutBtn">찜내역/주문내역</a> 
+            <a href="../servicecenter/customer.html" id="logoutBtn">고객센터</a> 
+          </div>
+        </div>
+      </div>
+      <a href="../main/main.html" class="sidebar-menu">홈</a>
+      <a href="../q&a/qanda.html" class="sidebar-menu">Q & A</a>
+      <a href="../servicecenter/customer.html" class="sidebar-menu">고객센터</a>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+    <main class="main"> 
+      <main class="vitamin-container">
+        <h2 class="title">비타민 성분 전체 목록 (카테고리별)</h2>
+        <div id="vitaminList" class="vitamin-list"></div>
+      </main>
+      <div id="descModal" class="desc-modal">
+        <div class="desc-modal-content">
+          <span id="descClose" class="desc-close">&times;</span>
+          <h3 id="descTitle"></h3>
+          <img id="descImage" src="" alt="" />
+          <p id="descText"></p>
+          <p id="descRDA"></p>
+          <a id="descLink" href="#" target="_blank">자세히 보기</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-section">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <a href="../main/main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
+        </div>
+        <div class="footer-text">
+          <span>㈜VITANTAN</span>
+          <span>대표이사 : 박김조정 | 주소 : 충청남도 천안시 동남구 대흥동 134</span>
+          <span>대표번호 : 1234-1234 | Email: vitantan@vita.com</span>
+          <span>사업자 등록번호 : 123 45 67890</span>
+          <span>통신판매업신고 : 2025 서울송파 -0000 | 고객센터 : 02-123-4567</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="vitamin.js"></script>
+  <script src="../main/togglesidebar.js"></script>
+  <script src="../main/commonloginlogout.js"></script>
+</body>
+</html>

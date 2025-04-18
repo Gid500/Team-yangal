@@ -1,0 +1,56 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>ID 찾기</title>
+  <link rel="stylesheet" href="../login/findid.css">
+  <link rel="stylesheet" href="../login/sidemenu.css">
+</head>
+<body>
+    <form class="login-form" id="signup-form">
+        <div class="input-wrapper">
+          <div class="logo"><a href="../main/main.html">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a>
+          </div>
+          <fieldset class="login-line">
+            <label for="newid">새로운 ID</label>
+            <input type="text" id="newid" placeholder="아이디 입력" maxlength="8">
+            <label for="newpw">비밀번호</label>
+            <input type="text" id="newpw" placeholder="비밀번호 입력" maxlength="15">
+            <label for="verifypw">비밀번호 확인</label>
+            <input type="text" id="verifypw" placeholder="비밀번호 입력" maxlength="15">
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="이름 입력" maxlength="15">
+            <label for="birth">생년월일 (8자리)</label>
+            <input type="text" id="birth" placeholder="예: 19990101" maxlength="8">
+            <label for="phone">휴대폰 번호 (- 제외)</label>
+            <div class="row-group">
+                <input type="text" id="phone" placeholder="예: 01012345678" maxlength="11">
+                <button type="button" class="login-btn" onclick="sendVerification()">인증번호 받기</button>
+            </div>
+            <label for="code">인증번호 입력</label>
+            <div class="row-group">
+                <input type="text" id="code" placeholder="인증번호 입력">
+                <button type="button" class="login-btn" onclick="verifyCode()">인증번호 조회</button>
+            </div>
+            <button type="submit" class="login-btn">완료</button>
+            <div class="flex-row" style="margin-top: 16px;">
+              <a href="../login/login.html">로그인 화면으로 돌아가기</a>
+            </div>
+          </fieldset>
+        </div>
+    
+        <nav class="side-nav">
+          <ul>
+            <li><a href="../main/main.html">home</a></li>
+            <li><a href="../login/login.html">Log-In</a></li>
+            <li><a href="../login/findid.html">ID 찾기</strong></a></li>
+            <li><a href="../login/findpw.html">PW 찾기</a></li>
+            <li><a href="signup.html">회원가입</a></li>
+          </ul>
+        </nav>
+    
+      </form>
+    <script src="../login/side.js"></script>
+    <script src="signup.js"></script>
+</body>

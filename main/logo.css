@@ -1,0 +1,22 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo a{
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    white-space: nowrap;
+    gap: 2px;
+}
+.logo a{
+    color: black;
+}
+.logo .highlight {
+    color: #f1c40f; /* 노란색 */
+}

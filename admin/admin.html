@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>admin dashbaord</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="maintest.css">
+        <link rel="stylesheet" href="admin.css">
+    </head>
+    <body>
+        <div class="admin-sidebar">
+            <ul class="admin-menu">
+                <div class="logo">
+                    <a href="index.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+                    </a>
+                </div>
+                <li class="admin-item"><a href="">대시보드</a></li>
+                <li class="admin-item"><a href="">트래픽</a></li>
+                <li class="admin-item"><a href="">주문 목록</a></li>
+                <li class="admin-item"><a href="">게시판</a></li>
+                <li class="admin-item"><a href="">리뷰</a></li>
+            </ul>
+        </div>
+        <div>
+            <header class="admin-header">
+                <div class="site-name">
+                    VITANTAN
+                </div>
+                <div class="admin-option">
+                    <a href="" class="opt-item">연장/업그레이드</a>
+                    <a href="" class="opt-item">나가기</a>
+                </div>
+            </header>
+            <div>
+                <div class="admin-main">
+                    <div class="main-item1">
+                        <canvas id="myChart" style="display: block; box-sizing: border-box; width: 470px; height: 240px;"></canvas>
+                    </div>
+                    <div class="main-item2">
+                        <div class="admin-data">
+                            <img src="Empty.png" alt="">
+                            <div class="name-area">
+                                <span>□□□□□</span>
+                                <a href="">로그아웃</a>
+                            </div>
+                            <div class="admin-div">
+                                <div class="admin-data1">
+                                    <span>□□□□</span>
+                                    <span>□□□□□□□</span>
+                                    <span>□□□</span>
+                                </div>
+                                <div class="admin-data1">
+                                    <span>□□□□</span>
+                                    <span>□□□□□□□</span>
+                                    <span>□□□</span>
+                                </div>
+                                <div class="admin-data1">
+                                    <span>□□□□</span>
+                                    <span>□□□□□□□</span>
+                                    <span>□□□</span>
+                                </div>
+                            </div>
+                            <div class="admin-div">
+                                <div class="admin-data1">
+                                    <span>□□□□</span>
+                                    <span>□□□□□□□</span>
+                                    <span>□□□</span>
+                                </div>
+                                <div class="admin-data1">
+                                    <span>□□□□</span>
+                                    <span>□□□□□□□</span>
+                                    <span>□□□</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-main">
+                    <div class="main-item3">
+                        <table class="order-list">
+                            <div class="table-title">상품주문</div>
+                            <tr class="order-item table-head">
+                                <td>주문번호</td>
+                                <td>주문자명</td>
+                                <td>수령자명</td>
+                                <td>총주문액</td>
+                                <td>주문일시</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="main-item4">
+                        <table class="order-list">
+                                <div class="table-title">최근 회원가입한 회원</ㅇ>
+                            <tr class="order-item table-head">
+                                <td>이름</td>
+                                <td>아이디</td>
+                                <td>이메일</td>
+                                <td>가입일시</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="admin-main">
+                    <div class="admin-main">
+                        <div class="main-item5">
+                            <table class="order-list">
+                                <div class="table-title">최근에 올라온 게시물</ㅇ>
+                                <tr class="order-item table-head">
+                                    <td>코드</td>
+                                    <td>제목</td>
+                                    <td>닉네임</td>
+                                    <td>내용</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="main-item6">
+                            <table class="order-list">
+                                <div class="table-title">최근 작성된 리뷰 리스트</ㅇ>
+                                <tr class="order-item table-head">
+                                    <td>코드</td>
+                                    <td>제목</td>
+                                    <td>닉네임</td>
+                                    <td>리뷰 점수</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            var ctx = document.getElementById('myChart');
+            var chart = new Chart(ctx, {
+                // 만들기 원하는 차트의 유형
+                type: 'bar',
+
+                // 데이터 집합을 위한 데이터
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: '방문자 기록 샘플',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [15, 15, 2, 5, 20, 30, 45]
+                    }, {
+                        type: 'line',
+                        label: '방문자 기록 샘플',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [15, 15, 2, 5, 20, 30, 45]
+                    }]
+                },
+
+                // 설정은 여기서 하세요
+                options: {}
+            });
+            </script>
+    </body>
+</html>

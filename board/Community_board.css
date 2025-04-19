@@ -19,8 +19,8 @@
     height: 700px;
 }
 .community-board{
-    border-width: 2px 0 1px;
-    border-style: solid;
+    border-bottom: 1px solid #f1c40f;
+    border-top: 2px solid #f1c40f;
     width: 840px;
     padding: 0;
     height: 37px;
@@ -28,7 +28,9 @@
     text-align: center;
     color: #333;
 }
-
+.write{
+    text-align: right;
+}
 /*  */
 
 .write-btn-flex{

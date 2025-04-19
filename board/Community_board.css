@@ -28,8 +28,9 @@
     text-align: center;
     color: #333;
 }
-.write-wrapper a{
-    text-align: center;
+.write-wrapper{
+    max-width: 840px;
+    text-align: right;
 }
 /*  */
 

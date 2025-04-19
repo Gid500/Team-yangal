@@ -16,8 +16,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-  
-
 
 .search-section {
     display: flex;
@@ -73,7 +71,22 @@ body {
     background-color: #f9f9f9;
 }
   
-  
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar button {
+    padding: 6px 12px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color:white;
+    background-color: #131212;
+    border: 1px #ccc;
+}
+
 .food-item {
     display: flex;
     justify-content: space-between;
@@ -115,18 +128,13 @@ body {
     font-size: 16px;
     font-weight: bold;
     background-color: #1acf38;
-    color: white;
+    color: black;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
 }
-  
-.analyze-btn:hover {
-    background-color: #149f2d;
-}
-  
-  
+
+
 .analyze-btn:hover {
     background-color: #ddd;
 }
@@ -134,6 +142,49 @@ body {
 .challenge-section {
     display: flex;
     justify-content: center;
+}
+
+.analysis-section p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+#challengeBtn {
+    margin: 10px 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffc30e; /* 다른 색상으로 구분 */
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#challengeBtn:hover {
+    background-color: #ddd;
+}
+
+#market-btn{
+    margin: 10px 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ff4943; /* 다른 색상으로 구분 */
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#market-btn:hover{
+    background-color: #ddd;
+}
+
+.vitamin-chart-section {
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
 }
-  

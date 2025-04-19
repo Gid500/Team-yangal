@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-/*
 // 로그인 상태가 아니면 접근 차단
 document.addEventListener("DOMContentLoaded", function () {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -19,4 +18,3 @@ document.addEventListener("DOMContentLoaded", function () {
     return; // 이후 스크립트 실행 중단
   }
 });
-*/

@@ -44,6 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  //구매하기
+  const initBuy = () => {
+    const buyBtns = document.querySelectorAll('.buy-btn');
+  
+    buyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('구매되었습니다!');
+
+        window.open('https://www.coupang.com', '_blank');
+      });
+    });
+  };
+
   // 공유 버튼 기능
   const initShare = () => {
     const shareBtns = document.querySelectorAll('.share-btn');
@@ -88,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 초기화 실행
   initWishlist();
   initCart();
+  initBuy();
   initShare();
   initTabs();
 });

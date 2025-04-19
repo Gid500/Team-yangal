@@ -1,55 +1,51 @@
-const user = {
+const admin = {
   type: 'admin',
   name: 'admin',
   username: 'admin',
   password: 'admin',
 };
 
-localStorage.setItem('admin', JSON.stringify(user));
+localStorage.setItem('admin', JSON.stringify(admin));
 
-document
-  .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    const userid = document.getElementById("userid").value;
-    const password = document.getElementById("userpassword").value;
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const userid = document.getElementById("userid").value;
+  const password = document.getElementById("userpassword").value;
 
-    const user = localStorage.getItem(userid);
-    
-    const parsedUser = JSON.parse(user);
- 
-    if(parsedUser.type === 'admin') {
-      if (user) {
-          if (parsedUser.password === password) {
-            // 로그인 성공 시 저장
-            parsedUser.userid = userid;
-            localStorage.setItem("user", JSON.stringify(parsedUser));
-            localStorage.setItem("isLoggedIn", "true"); 
-            localStorage.setItem("loggedInUserId", userid); 
-            window.location.href = "../admin/admin.html";
-          } else {
-          alert("Incorrect password");
-        }
-      } else {
-        alert("User not found");
-      }
+  if (userid === 'admin') {
+    const adminData = localStorage.getItem('admin');
+    const parsedAdmin = JSON.parse(adminData);
+
+    if (parsedAdmin.password === password) {
+      localStorage.setItem("user", JSON.stringify(parsedAdmin));
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("loggedInUserId", userid);
+      window.location.href = "../admin/admin.html";
+    } else {
+      alert("Incorrect password");
     }
-    
-    if(parsedUser.type === 'user') {
-      if (user) {  
-          if (parsedUser.password === password) {
-            // 로그인 성공 시 저장
-            parsedUser.userid = userid;
-            localStorage.setItem("user", JSON.stringify(parsedUser));
-            localStorage.setItem("isLoggedIn", "true"); 
-            localStorage.setItem("loggedInUserId", userid); 
-            window.location.href = "../main/main.html";
-          } else {
-          alert("Incorrect password");
-        }
-      } else {
-        alert("User not found");
-      }
-    }
-    
-  });
+    return;
+  }
+
+  // 일반 사용자용 
+  const userData = localStorage.getItem(userid);
+  if (!userData) {
+    alert("User not found");
+    return;
+  }
+
+  const parsedUser = JSON.parse(userData);
+
+  if (parsedUser.password !== password) {
+    alert("Incorrect password");
+    return;
+  }
+
+// 로그인 성공
+  parsedUser.userid = userid;
+  localStorage.setItem("user", JSON.stringify(parsedUser));
+  localStorage.setItem("isLoggedIn", "true");
+  localStorage.setItem("loggedInUserId", userid);
+  window.location.href = "../main/main.html";
+});
+

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../main/footer.css">
   <link rel="stylesheet" href="todays.css">
 </head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <body>
   <div class="wrapper">
     <div class="header">
@@ -73,7 +74,10 @@
       <div class="container">
         <!-- 음식 검색 결과 -->
         <div class="box" id="searchResults">
-          <h2>음식 리스트</h2>
+          <div class="title-bar">
+            <h2>음식 리스트</h2>
+            <button onclick="resetFoods()">초기화</button>
+          </div> 
           <div id="foodList"></div>
         </div>
         <!-- 선택된 음식 -->
@@ -89,12 +93,23 @@
         <div class="analysis-section" id="analysisSection" style="display: none;">
           <div class="box">
             <h4>분석 결과</h4>
-            <p style="font-size:100px;">돼지</p>
+            <p style="font-size:20px;"></p>
           </div>
         </div>
         <div class="challenge-section">
-          <button class="analyze-btn" onclick="location.href='vitaminchallenge.html'">비타민 챌린지</button>
+          <button id="challengeBtn">비타민 챌린지</button>
         </div>
+        <!-- 챌린지버튼 누르면 나오는 섹션 -->
+        <div class="vitamin-chart-section" id="vitaminChartSection" style="display: none;">
+          <div class="box">
+            <canvas id="macroChart" width="400" height="400"></canvas>
+          </div>
+          <div class="box">
+            <canvas id="vitaminChart" width="400" height="400"></canvas>
+          </div>
+        </div>
+
+        <button id="market-btn" onclick="location.href='../market/market.html'">Go Market!</button>
       </div>
     </div>
   </main>
@@ -113,9 +128,9 @@
       </div>
     </footer>
   </div>
-
-  <script src="todays.js"></script>
   <script src="../main/togglesidebar.js"></script>
   <script src="../main/commonloginlogout.js"></script>
+  <script src="todays.js"></script>
+  <Script src="vitaminchallenge1.js"></Script>
 </body>
 </html>

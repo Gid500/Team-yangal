@@ -14,13 +14,21 @@
 .community-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;    
-    height: 600px;
+    align-items: center;
+    margin-top: 150px;
+    height: 700px;
 }
 .community-board{
-    display: flex;
-    justify-content:center;
+    border-width: 2px 0 1px;
+    border-style: solid;
+    width: 840px;
+    padding: 0;
+    height: 37px;
+    vertical-align: middle;
+    text-align: center;
+    color: #333;
 }
+
 /*  */
 
 .write-btn-flex{

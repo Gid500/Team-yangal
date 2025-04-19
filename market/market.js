@@ -25,14 +25,9 @@ const filterMenuInit = () => {
         });
     });
 };
-<<<<<<< HEAD
 filterMenuInit();
 
 
-=======
-
-filterMenuInit();
->>>>>>> origin/T2
 //찜
 const initWishlist = () => {
   const wishBtns = document.querySelectorAll('.wishlist-btn');
@@ -54,14 +49,9 @@ const initWishlist = () => {
     });
   });
 };
-<<<<<<< HEAD
 initWishlist();
 
 
-=======
-
-initWishlist();
->>>>>>> origin/T2
 //장바구니
 const initCart = () => {
   const cartBtns = document.querySelectorAll('.cart-btn');
@@ -71,11 +61,7 @@ const initCart = () => {
       const product = btn.closest('.product');
       const productId = product.getAttribute('data-product-id');
 
-<<<<<<< HEAD
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
-=======
-      let cart = JSON.parse(localStorage.getItem('orderlist')) || [];
->>>>>>> origin/T2
 
       if (!cart.includes(productId)) {
         cart.push(productId);
@@ -84,7 +70,6 @@ const initCart = () => {
         alert('이미 장바구니에 있는 상품입니다.');
       }
 
-<<<<<<< HEAD
       localStorage.setItem('cart', JSON.stringify(cart));
     });
   });
@@ -110,12 +95,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-=======
-      localStorage.setItem('orderlist', JSON.stringify(orderlist));
-    });
-  });
-};
-
-initCart();
-
->>>>>>> origin/T2

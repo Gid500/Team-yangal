@@ -51,5 +51,4 @@ document
       alert("User not found");
     }
   }
-  
 });

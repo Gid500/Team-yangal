@@ -24,7 +24,12 @@ setInterval(() => {
     moveToSlide(nextIndex);
 }, 4000);
 
+function visitCount() {
+    if(document.cookie.match(/withit/)) return;
 
-  
-  
-  
+    let a = new Date();
+    a.setDate(new Date().getDate()+1);
+    document.cookie = 'withit = 1; Exprires = ' + a'
+
+    fetch(url, options);
+}

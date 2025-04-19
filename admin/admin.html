@@ -9,31 +9,34 @@
         <link rel="stylesheet" href="admin.css">
     </head>
     <body>
-        <div class="admin-sidebar">
-            <ul class="admin-menu">
-                <div class="logo">
-                    <a href="index.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
-                    </a>
-                </div>
-                <li class="admin-item"><a href="">대시보드</a></li>
-                <li class="admin-item"><a href="">트래픽</a></li>
-                <li class="admin-item"><a href="">주문 목록</a></li>
-                <li class="admin-item"><a href="">게시판</a></li>
-                <li class="admin-item"><a href="">리뷰</a></li>
-            </ul>
-        </div>
         <div>
             <header class="admin-header">
-                <div class="site-name">
-                    VITANTAN
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+                        </a>
+                        <div class="site-name">
+                            VITANTAN
+                        </div>
+                    </div>
                 </div>
                 <div class="admin-option">
                     <a href="" class="opt-item">연장/업그레이드</a>
                     <a href="../main/main.html" class="opt-item">나가기</a>
                 </div>
             </header>
-            <div>
-                <div class="admin-main">
+            <div class="admin-main">
+                <div class="admin-sidebar">
+                    <ul class="admin-menu">
+                        <li class="admin-item"><a href="">대시보드</a></li>
+                        <li class="admin-item"><a href="">트래픽</a></li>
+                        <li class="admin-item"><a href="">주문 목록</a></li>
+                        <li class="admin-item"><a href="">게시판 내역</a></li>
+                        <li class="admin-item"><a href="">리뷰 내역</a></li>
+                    </ul>
+                </div>
+            <div class="wrapper">
+                <div class="flex-wrapper">
                     <div class="main-item1">
                         <canvas id="myChart" style="display: block; box-sizing: border-box; width: 470px; height: 240px;"></canvas>
                     </div>
@@ -41,7 +44,7 @@
                         <div class="admin-data">
                             <img src="Empty.png" alt="">
                             <div class="name-area">
-                                <span>□□□□□</span>
+                                <span id="admin-name"></span>
                                 <a href="">로그아웃</a>
                             </div>
                             <div class="admin-div">
@@ -76,7 +79,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="admin-main">
+                    
+                <div class="flex-wrapper">
                     <div class="main-item3">
                         <table class="order-list">
                             <div class="table-title">상품주문</div>
@@ -101,34 +105,34 @@
                         </table>
                     </div>
                 </div>
-                <div class="admin-main">
-                    <div class="admin-main">
-                        <div class="main-item5">
-                            <table class="order-list">
-                                <div class="table-title">최근에 올라온 게시물</ㅇ>
-                                <tr class="order-item table-head">
-                                    <td>코드</td>
-                                    <td>제목</td>
-                                    <td>닉네임</td>
-                                    <td>내용</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="main-item6">
-                            <table class="order-list">
-                                <div class="table-title">최근 작성된 리뷰 리스트</ㅇ>
-                                <tr class="order-item table-head">
-                                    <td>코드</td>
-                                    <td>제목</td>
-                                    <td>닉네임</td>
-                                    <td>리뷰 점수</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+                    
+                <div class="flex-wrapper">
+                    <div class="main-item5">
+                    <table class="order-list">
+                        <div class="table-title">최근에 올라온 게시물</div>
+                        <tr class="order-item table-head">
+                            <td>번호</td>
+                            <td>제목</td>
+                            <td>내용</td>
+                            <td>닉네임</td>
+                            <td>게시일</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="main-item6">
+                    <table class="order-list">
+                        <div class="table-title">최근 작성된 리뷰 리스트</ㅇ>
+                        <tr class="order-item table-head">
+                            <td>코드</td>
+                            <td>제목</td>
+                            <td>닉네임</td>
+                            <td>리뷰 점수</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
+        <script src="admin.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             var ctx = document.getElementById('myChart');

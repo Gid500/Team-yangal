@@ -51,14 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
     buyBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         alert('구매되었습니다!');
-
         window.open('https://www.coupang.com', '_blank');
       });
     });
   };
 
-=======
->>>>>>> origin/T3
+
+
   // 공유 버튼 기능
   const initShare = () => {
     const shareBtns = document.querySelectorAll('.share-btn');
@@ -89,10 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     tabButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         const target = btn.getAttribute("data-tab");
-
         tabButtons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
-
         tabContents.forEach(c => {
           c.style.display = c.id === target ? "block" : "none";
         });
@@ -104,8 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initWishlist();
   initCart();
   initBuy();
-=======
->>>>>>> origin/T3
   initShare();
   initTabs();
 });

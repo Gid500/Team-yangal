@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-=======
-/*바디*/
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #fff;
-}
-
-
->>>>>>> origin/T2
 .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -22,6 +10,7 @@ body {
 }
 /*상품페이지*/
 .product-grid {
+    max-width: 1020px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -122,10 +111,6 @@ body {
 .menu_button_area ul li button.active {
     background: #222;
     color: #fff;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/T3
 }
 
 .search-container {
@@ -133,27 +118,12 @@ body {
     justify-content: flex-end;
     margin-bottom: 1rem;
     padding-right: 1rem; /* 우측 여백 조정 */
-<<<<<<< HEAD
 }
 
 #searchInput {
     width: 270px;
-=======
-  }
-  
-  #searchInput {
-    width: 300px;
->>>>>>> origin/T3
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
-<<<<<<< HEAD
 }
-=======
-  }
-  
-=======
-}
->>>>>>> origin/T2
->>>>>>> origin/T3

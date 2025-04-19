@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-
   // 공유 버튼 기능
   const initShare = () => {
     const shareBtns = document.querySelectorAll('.share-btn');

@@ -147,11 +147,22 @@ function renderCart() {
       </div>
       <div class="item-actions">
         <input type="number" class="quantity" min="1" value="1" />
-        <button class="buy-btn">구매하기</button>
+        <button class="buy-btn" data-id="${p.id}">구매하기</button>
         <button class="remove-btn" data-id="${p.id}">삭제</button>
       </div>
     `;
     container.appendChild(li);
+  });
+  
+  //구매하기 버튼 누르면 상세페이지로 이동
+  container.addEventListener("click", function (e) {
+    if (e.target.classList.contains("buy-btn")) {
+      const productId = e.target.dataset.id;
+      // 숫자만 추출 후 정수로 변환
+      const idNumber = parseInt(productId.replace(/\D/g, "")); 
+
+      window.location.href = `../market/DetailedPage_${idNumber}.html`;
+    }
   });
 
   bindButtons(); // 삭제/구매 버튼 이벤트 다시 바인딩

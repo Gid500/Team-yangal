@@ -136,10 +136,8 @@ function renderWishlist() {
     const li = document.createElement('li');
     li.className = 'wishlist-item';
     li.innerHTML = `
-<<<<<<< HEAD
       <div class="item-image"><img style="width: 80px; height: 80px" src="${p.image}" alt="${p.name}" /></div>
 =======
-<<<<<<< HEAD
       <div class="item-image"><img src="${p.image}" alt="${p.name}" /></div>
 =======
       <div class="item-image"><img src="${p.img}" alt="${p.name}" /></div>

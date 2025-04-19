@@ -56,7 +56,6 @@ canvas{
     padding: 0;
 }
 .admin-header{
-    width: 1000px;
     background: white;
     border-bottom: 1px solid #ddd;
     display: flex;

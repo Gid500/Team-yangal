@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-<<<<<<< HEAD
   //구매하기
   const initBuy = () => {
     const buyBtns = document.querySelectorAll('.buy-btn');
@@ -104,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 초기화 실행
   initWishlist();
   initCart();
-<<<<<<< HEAD
   initBuy();
 =======
 >>>>>>> origin/T3

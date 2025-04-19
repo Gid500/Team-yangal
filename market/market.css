@@ -14,12 +14,8 @@ body {
 }
 
 .title {
-    position: relative;
-    height: 100px;
     margin-bottom: 40px;
-    display: flex;
     align-items: center;
-    padding: 0 30px;
 }
 /*상품페이지*/
 .product-grid {
@@ -84,7 +80,6 @@ body {
 
 .menu_list ul,
 .menu_button_area ul {
-    display: flex;
     width: 100%;
     margin: 0;
     padding: 0 20px;
@@ -111,10 +106,10 @@ body {
 }
 
 .menu_button_area ul li button {
-    background-color: transparent;
     border: none;
     background: #eee;
     font-size:17px;
+    line-height: 20px;
     margin-bottom:10px;
     padding: 5px 15px;
     border-radius: 100px;

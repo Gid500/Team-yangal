@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 /*바디*/
 body {
     margin: 0;
@@ -7,6 +9,7 @@ body {
 }
 
 
+>>>>>>> origin/T2
 .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -119,6 +122,10 @@ body {
 .menu_button_area ul li button.active {
     background: #222;
     color: #fff;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/T3
 }
 
 .search-container {
@@ -126,12 +133,27 @@ body {
     justify-content: flex-end;
     margin-bottom: 1rem;
     padding-right: 1rem; /* 우측 여백 조정 */
+<<<<<<< HEAD
 }
 
 #searchInput {
     width: 270px;
+=======
+  }
+  
+  #searchInput {
+    width: 300px;
+>>>>>>> origin/T3
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
+<<<<<<< HEAD
 }
+=======
+  }
+  
+=======
+}
+>>>>>>> origin/T2
+>>>>>>> origin/T3

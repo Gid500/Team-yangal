@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+<<<<<<< HEAD
   //구매하기
   const initBuy = () => {
     const buyBtns = document.querySelectorAll('.buy-btn');
@@ -57,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+=======
+>>>>>>> origin/T3
   // 공유 버튼 기능
   const initShare = () => {
     const shareBtns = document.querySelectorAll('.share-btn');
@@ -101,7 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // 초기화 실행
   initWishlist();
   initCart();
+<<<<<<< HEAD
   initBuy();
+=======
+>>>>>>> origin/T3
   initShare();
   initTabs();
 });

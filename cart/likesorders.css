@@ -32,11 +32,28 @@
     color: white;
   }
   
+<<<<<<< HEAD
   .wishlist {
     list-style: none;
     padding: 0;
   }
   
+=======
+  .wishlist{
+    list-style: none;
+    padding: 20px;
+  }
+
+  .order-list{
+    border: solid;
+    list-style-type: none;
+  }
+
+  .item-actions{
+    padding: 20px;
+  }
+
+>>>>>>> origin/T2
   .wishlist-item {
     display: flex;
     justify-content: space-between;

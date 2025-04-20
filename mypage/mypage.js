@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (isLoggedIn !== "true") {
     alert("로그인 후 이용하실 수 있습니다.");
-    window.location.href = "../login/login.html"; // 또는 main.html
-    return; // 이후 스크립트 실행 중단
+    window.location.href = "../login/login.html"; 
+    return; 
   }
 });

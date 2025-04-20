@@ -28,10 +28,10 @@ document
           localStorage.setItem("loggedInUserId", userid); 
           window.location.href = "../admin/admin.html";
         } else {
-        alert("Incorrect password");
+        alert("비밀번호가 일치하지 않습니다.");
       }
     } else {
-      alert("User not found");
+      alert("사용자를 찾을 수 없습니다.");
     }
   }
   
@@ -45,10 +45,10 @@ document
           localStorage.setItem("loggedInUserId", userid); 
           window.location.href = "../main/main.html";
         } else {
-        alert("Incorrect password");
+        alert("비밀번호가 일치하지 않습니다.");
       }
     } else {
-      alert("User not found");
+      alert("사용자를 찾을 수 없습니다.");
     }
   }
 });

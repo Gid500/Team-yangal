@@ -1,0 +1,52 @@
+.faq-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  input#faqSearch {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0 2rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  
+  .faq-item .question {
+    font-weight: bold;
+  }
+  
+  .faq-item .answer {
+    display: none;
+    margin-top: 0.5rem;
+    color: #555;
+  }
+  
+  .faq-item.active .answer {
+    display: block;
+  }
+  
+  .contact-help {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .contact-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .page-title{
+    margin-top:100px;
+  }

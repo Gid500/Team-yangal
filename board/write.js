@@ -1,5 +1,6 @@
 const post = 'post';
 let views = 0;
+let pNo = 0;
 
 function assignIndex() {
     const lists = JSON.parse(localStorage.getItem(BOARDLIST_LS));
@@ -24,11 +25,11 @@ document
     const month = pDate.getMonth()+1;
     const day = pDate.getDate();
 
-    
     const lists = JSON.parse(localStorage.getItem(post));
     if (!lists) {
         const objArr = [];
         objArr.push({
+            no: `${pNo}`,
             title: writetitle,
             content: content,
             writer: `${userid.name}`,
@@ -38,6 +39,7 @@ document
      localStorage.setItem(post, JSON.stringify(objArr));
     } else {
         lists.push({
+            no: `${pNo}`,
             title: writetitle,
             content: content,
             writer: `${userid.name}`,

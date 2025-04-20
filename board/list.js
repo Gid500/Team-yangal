@@ -12,7 +12,7 @@ const tbody = document.querySelector("tbody");
 function template(post, index){
     return `
     <tr>
-        <td>${index + 1}</td>
+        <td>${post.no = index + 1}</td>
         <td><a href="/board/view.html?index=${index}">${post.title}</a></td>
         <td><a href="/board/view.html?index=${index}">${post.content}</a></td>
         <td>${post.writer}</td>

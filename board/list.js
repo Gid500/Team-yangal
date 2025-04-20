@@ -13,8 +13,8 @@ function template(post, index){
     return `
     <tr>
         <td>${post.no = index + 1}</td>
-        <td><a href="/board/view.html?index=${index}">${post.title}</a></td>
-        <td><a href="/board/view.html?index=${index}">${post.content}</a></td>
+        <td><a href="view.html?index=${index}">${post.title}</a></td>
+        <td><a href="view.html?index=${index}">${post.content}</a></td>
         <td>${post.writer}</td>
         <td>${post.Date}</td>
         <td>${post.view}</td>

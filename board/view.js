@@ -47,4 +47,5 @@ removeBtn.addEventListener('click', function() {
 
     const setBoard = JSON.stringify(postOBJ);
     localStorage.setItem("post", setBoard);
+    location.replace('list.html');
 });

@@ -1,14 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const currentPath = window.location.pathname;
-    const menuLinks = document.querySelectorAll('.nav-menu a');
+  const currentPath = window.location.pathname;
+  const menuLinks = document.querySelectorAll('.nav-menu a');
 
-    menuLinks.forEach(link => {
-      const linkPath = new URL(link.href).pathname;
-      if (currentPath.includes(linkPath)) {
-        link.classList.add('active');
-      }
-    });
+  menuLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+
+    // 예: /market/market.html → /market
+    const linkDir = linkPath.split('/').slice(0, -1).join('/');
+
+    if (currentPath.startsWith(linkDir)) {
+      link.classList.add('active');
+    }
+  });
 });
+
+
 
 
 

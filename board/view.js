@@ -5,10 +5,12 @@ const idx = location.search;
 const index = idx.split("=")[1];
 const post = postOBJ[index];
 
-const postcontent = document.querySelector(".wrapper .write-container");
+const postcontent = document.querySelector(".wrapper .view-container");
 
 function viewCount() {
     post.view++;
+    const viewCount = JSON.stringify(postOBJ);
+    localStorage.setItem("post", viewCount);
 }
 
 function template(){

@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const currentPath = window.location.pathname;
+    const menuLinks = document.querySelectorAll('.nav-menu a');
+
+    menuLinks.forEach(link => {
+      const linkPath = new URL(link.href).pathname;
+      if (currentPath.includes(linkPath)) {
+        link.classList.add('active');
+      }
+    });
+});
+
+
+
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     const overlay = document.getElementById("overlay");

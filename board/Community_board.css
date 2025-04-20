@@ -28,7 +28,8 @@
     text-align: center;
     color: #333;
 }
-.write{
+.write-wrapper{
+    max-width: 840px;
     text-align: right;
 }
 /*  */

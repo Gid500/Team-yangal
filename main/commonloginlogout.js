@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.removeItem("user");
           localStorage.removeItem("isLoggedIn");
           localStorage.removeItem("loggedInUserId");
-          window.location.href = "main.html";
+          window.location.href = "../main/main.html";
       });
 
       // 사이드바 로그인 숨기기
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.removeItem("user");
           localStorage.removeItem("isLoggedIn");
           localStorage.removeItem("loggedInUserId");
-          window.location.href = "main.html";
+          window.location.href = "../mainmain.html";
       });
   }
 });

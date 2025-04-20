@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q&A | VITANTAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../main/logo.css" />
+  <link rel="stylesheet" href="../main/header.css" />
+  <link rel="stylesheet" href="../main/footer.css" />
+  <link rel="stylesheet" href="qanda.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="menuBtn" onclick="toggleSidebar()">☰</button>
+        <div class="logo">
+          <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N
+          </a>
+        </div>
+      </div>
+      <div class="header-right">
+        <nav class="nav-menu">
+          <a href="../vitamin/vitamin.html">VITAMIN</a>
+          <a href="../todaysnutrients/today.html">오늘의 영양</a>
+          <a href="../market/market.html">MARKET</a>
+          <a href="#">COMMUNITY</a>
+        </nav>
+        <a href="../login/login.html" class="login-btn">로그인</a>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header logo">
+        <a href="../main/main.html">VIT<font class="highlight">A</font>NT<font class="highlight">A</font>N</a>
+          
+        <div class="label">
+          <span><a href="../login/login.html" id="sidebarLogin">로그인</a></span>
+        </div>
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+      </div>
+      <div class="user-info-box" id="userInfo" style="display: none;">
+        <div class="user-icon">👤</div>
+        <div class="user-text">
+          <div class="user-name-row">
+            <span class="user-name" id="userName"></span>
+            <button id="logoutBtn" class="logout-btn">로그아웃</button>
+          </div>
+          <div class="user-submenu">
+            <a href="../mypage/mypage.html">마이페이지</a> 
+            <a href="#" id="logoutBtn">리뷰</a> 
+            <a href="../cart/likes.html" id="logoutBtn">찜내역/카트목록</a> 
+            <a href="customer.html" id="logoutBtn">고객센터</a> 
+          </div>
+        </div>
+      </div>
+        <a href="../main/main.html" class="sidebar-menu">홈</a>
+        <a href="#" class="sidebar-menu">Q & A</a>
+        <a href="customer.html" class="sidebar-menu">고객센터</a>
+    </div>
+      
+    <main class="main"> 
+        <section class="faq-page">
+            <h1 class="page-title">자주 묻는 질문</h1>
+            <input type="text" id="faqSearch" placeholder="질문을 검색해보세요">
+          
+            <div class="faq-list" id="faqList">
+              <div class="faq-item">
+                <div class="question">Q. 아이디를 잊어버렸어요</div>
+                <div class="answer">아이디 찾기 페이지에서 생년월일 입력 후 휴대폰번호 인증을 받으면 가입한 아이디를 알 수 있습니다.</div>
+              </div>
+              <div class="faq-item">
+                <div class="question">Q. 비밀번호를 잊어버렸어요</div>
+                <div class="answer">비밀번호 찾기 페이지에서 가입한 아이디 입력 후 휴대폰번호 인증을 받으면 새로운 비밀번호 설정이 가능합니다.</div>
+              </div>
+              <div class="faq-item">
+                <div class="question">Q. 로그인이 안 돼요</div>
+                <div class="answer">아이디와 비밀번호를 다시 확인해보시고 문제가 지속될 경우 고객센터로 문의해 주세요</div>
+              </div>
+              <div class="faq-item">
+                <div class="question">Q. 고객센터 운영 시간은 어떻게 되나요?</div>
+                <div class="answer">카카오톡 오픈 채팅으로 상담하고 있으며 평일 09시 ~ 17시 30분 (점심시간 12:50 ~13:30)까지 운영하고 있습니다.<br>주말 및 공휴일은 채팅상담을 하지 않습니다.</div>
+              </div>
+            </div>
+          
+            <div class="contact-help">
+              <p>원하시는 답변을 찾지 못하셨나요?</p>
+              <a href="../servicecenter/customer.html" class="contact-btn">고객센터 문의하기</a>
+            </div>
+          </section>          
+    </main>
+
+    <footer class="footer-section">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <a href="../main/main.html">VIT<span class="highlight">A</span>NT<span class="highlight">A</span>N</a>
+        </div>
+        <div class="footer-text">
+          <span>㈜VITANTAN</span>
+          <span>대표이사 : 박김조정 | 주소 : 충청남도 천안시 동남구 대흥동 134</span>
+          <span>대표번호 : 1234-1234 | Email: vitantan@vita.com</span>
+          <span>사업자 등록번호 : 123 45 67890</span>
+          <span>통신판매업신고 : 2025 서울송파 -0000 | 고객센터 : 02-123-4567</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+    <script src="qanda.js"></script>
+    <script src="../main/togglesidebar.js"></script>
+    <script src="../main/commonloginlogout.js"></script>
+</body>
+</html>

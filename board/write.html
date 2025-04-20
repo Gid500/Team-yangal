@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="../main/footer.css">
   <link rel="stylesheet" href="../main/main.css">
   <link rel="stylesheet" href="Community_board.css">
-  <link rel="stylesheet" href="write.css">
-</head>
 <body>
     <div class="wrapper">
         <div class="header">
@@ -73,22 +71,23 @@
         <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
         <!-- 글작성 -->
-        <div class="write-container"> 
-            <form action="" class="write-form" id="write-form">
-                <div>
+        <main class="main"> 
+            <div class="write-container"> 
+                <form action="" class="write-form" id="write-form">
                     <div>
-                        <input type="text" name="writetitle" id="write-title" placeholder="제목">
+                        <div>
+                            <input type="text" name="writetitle" id="write-title" placeholder="제목">
+                        </div>
+                        <div>
+                            <textarea name="content" id="content" placeholder="내용을 작성해 주세요"></textarea>
+                        </div>
                     </div>
-                    <div>
-                        <textarea name="content" id="content" placeholder="내용을 작성해 주세요"></textarea>
+                    <div class="write-btn-flex">
+                        <button id="write-btn" type="submit">작성</button>
                     </div>
-                </div>
-                <div class="write-btn-flex">
-                    <button id="write-btn" type="submit">작성</button>
-                </div>
-            </form>
-        </div>
-
+                </form>
+            </div>
+        </main>
         <!-- Footer 시작 -->
         <footer class="footer-section">
             <div class="footer-inner">

@@ -30,6 +30,7 @@ function template(){
         </div>
         <div>
             <a href="list.html">목록으로</a>
+            <button type="button" id="remove-btn">삭제</button>
         </div>
     </div>  
 ` 
@@ -37,3 +38,13 @@ function template(){
 
 
 postcontent.innerHTML += template();
+
+const removeBtn = document.getElementById("remove-btn");
+
+removeBtn.addEventListener('click', function() {
+    postOBJ.splice(index, 1);
+    console.log(postOBJ);
+
+    const setBoard = JSON.stringify(postOBJ);
+    localStorage.setItem("post", setBoard);
+});

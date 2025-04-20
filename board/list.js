@@ -24,6 +24,6 @@ function template(post, index){
 
 const boards = JSON.parse(post);
 
-for(let i = 0 ; i <boards.length ; i++){
+for(let i = boards.length - 1 ; i > -1 ; i--){
     tbody.innerHTML += template(boards[i],i);
 }

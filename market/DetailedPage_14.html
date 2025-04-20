@@ -28,9 +28,7 @@
         <nav class="nav-menu">
           <a href="../vitamin/vitamin.html">VITAMIN</a>
           <a href="../vitamin/vitamin.html">오늘의 영양</a>
-
           <a href="#">오늘의 영양</a>
-
           <a href="../market/market.html">MARKET</a>
           <a href="#">COMMUNITY</a>
         </nav>
@@ -79,16 +77,16 @@
 
     <!-- 메인 콘텐츠 -->
     <main class="main">
-      <div class="product-detail product" data-product-id="product001">
+      <div class="product-detail product" data-product-id="product014">
         <!-- 이미지 영역 -->
         <div class="product-image">
-          <img src="images/image1.png" alt="상품 이미지" />
+          <img src="images/image14.png" alt="상품 이미지" />
         </div>
       
         <!-- 상품 정보 -->
         <div class="product-info">
-          <h2 class="product-name">센트룸 에너지B 60정</h2>
-          <p class="product-price">21,340원</p>
+          <h2 class="product-name">칼슘 마그네슘 아연 비타민D 90정 x 4병</h2>
+          <p class="product-price">46,900원</p>
           <div class="rating">
             ⭐ <span class="score"></span>
             <span class="review-count"></span>
@@ -103,7 +101,7 @@
           </div>
         </div>
       
-        <!-- 상세 설명 & 리뷰 -->
+        <!-- 상세 설명 -->
         <div class="product-tabs">
           <button class="tab-btn active" data-tab="description">상세설명</button>
           <button class="tab-btn" data-tab="reviews">리뷰</button>
@@ -111,8 +109,29 @@
         <div class="tab-content" id="description">
           <img src="images/detailpage14.PNG">
         </div>
+
+
+        <!--리뷰 탭 -->
         <div class="tab-content" id="reviews" style="display: none;">
-          <p>리뷰 목록이 여기에 나옵니다.</p>
+          <div class="review-form">
+            <h4>리뷰 작성하기</h4>
+            <div class="star-rating" id="starRating">
+              <span data-value="5">★</span>
+              <span data-value="4">★</span>
+              <span data-value="3">★</span>
+              <span data-value="2">★</span>
+              <span data-value="1">★</span>
+            </div>            
+            <textarea id="reviewText" placeholder="리뷰를 입력해주세요..."></textarea>
+            <div class="review-actions">
+              <button id="submitReview">등록</button>
+            </div>
+          </div>
+          
+          <div id="reviewList">
+            <!-- 작성된 리뷰가 여기에 추가됩니다 -->
+          </div>
+          
         </div>
       </div>
       

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.removeItem("user");
           localStorage.removeItem("isLoggedIn");
           localStorage.removeItem("loggedInUserId");
-          window.location.href = "../mainmain.html";
+          window.location.href = "../main/main.html";
       });
   }
 });

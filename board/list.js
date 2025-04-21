@@ -19,7 +19,7 @@ function template(post, index){
         <td>${post.Date}</td>
         <td>${post.view}</td>
     </tr>
-`   
+`
 }
 
 const boards = JSON.parse(post);

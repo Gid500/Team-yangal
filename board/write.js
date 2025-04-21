@@ -50,3 +50,12 @@ document
     } 
     location.replace('list.html');
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn !== "true") {
+      alert("로그인 후 이용하실 수 있습니다.");
+      window.location.href = "list.html"; // 로그인 페이지로 이동
+  }
+});

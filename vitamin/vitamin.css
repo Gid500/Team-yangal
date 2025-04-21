@@ -26,7 +26,6 @@ body {
   background: #f0f0f0;
   border-radius: 5px;
   margin-top: 20px;
-  transition: background 0.2s;
 }
 
 .accordion-title:hover {
@@ -36,7 +35,6 @@ body {
 .accordion-content {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.4s ease;
   padding: 0 10px;
   border-left: 2px solid #4caf50;
   margin-bottom: 15px;
@@ -65,7 +63,6 @@ body {
   padding: 12px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s;
   font-weight: bold;
   text-align: center;
 }

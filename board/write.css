@@ -37,7 +37,7 @@
 
 #write-title:focus,
 #content:focus {
-    border-color: #f1c40f;
+    border-color: #6fcf97;
     outline: none;
 }
 
@@ -65,7 +65,7 @@ textarea {
 #write-btn {
     width: 100px;
     padding: 10px;
-    background-color: #f1c40f;
+    background-color: #6fcf97;
     border: none;
     border-radius: 8px;
     font-weight: bold;
@@ -74,5 +74,5 @@ textarea {
 }
 
 #write-btn:hover {
-    background-color: #d4ac0d;
+    background-color: #6fcf97;
 }

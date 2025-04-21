@@ -1,39 +1,66 @@
+.main {
+    max-width: 1500px;
+    padding: 100px;
+    background: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
 .community-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    padding: 20px;
-}
-
-.community-container > div {
-    width: 95%;
-    max-width: 800px;
-}
-
-.community-board {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 3px solid #f1c40f;
-    border-bottom: 1px solid #f1c40f;
-    background-color: #fffbe6;
-    padding: 12px 0;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-
-    border-collapse: collapse;
     width: 100%;
+}
+
+/* 테이블 상단 글쓰기 버튼 */
+caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 10px 10px 10px;
+    position: relative;
+}
+
+.write-top {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.write-btn {
+    background-color: #6fcf97;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 테이블 스타일 */
+.community-board {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.community-board thead {
+    background-color: #f1f1f1;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
 }
 
 .community-board th,
 .community-board td {
-    border: 1px solid #dcdcdc;  
     padding: 12px;
-    font-size:13px; /
+    border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
-.table-head th {
-    background-color: #fdf4b2; 
-    font-weight: bold;
+.community-board td:nth-child(2) {
+    text-align: left;
+}
+
+.community-board tbody tr:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
 }

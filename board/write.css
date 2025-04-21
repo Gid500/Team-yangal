@@ -1,0 +1,78 @@
+.write-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.write-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ddd5d5;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+
+.write-form div label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+
+#write-title,
+#content {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fcfcfc;
+}
+
+#write-title:focus,
+#content:focus {
+    border-color: #f1c40f;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+#content {
+    height: 400px;
+}
+
+
+.write-top,
+.write-bottom {
+    text-align: right;
+}
+
+
+.write-btn-flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#write-btn {
+    width: 100px;
+    padding: 10px;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+#write-btn:hover {
+    background-color: #d4ac0d;
+}

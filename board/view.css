@@ -1,0 +1,29 @@
+.view-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #fefefe;
+    border-radius: 16px;
+}
+
+#view-content{
+    width: 400px;
+    height: 400px;
+}
+
+/* .view-container{
+
+} */
+
+/* #view-title{
+
+} */
+
+/* #view-data{
+
+} */
+
+/* #view-content{
+
+
+} */

@@ -36,33 +36,42 @@ function removeFood(index) {
 
 function resetFoods() {
   selectedFoods = [];
+  document.getElementById("selectedFoods").innerHTML = '';
   document.getElementById("foodList").innerHTML = '';
   document.getElementById("searchInput").value = '';
-  document.getElementById("selectedFoodList").innerHTML = '';
   document.getElementById("analysisResult").innerText = '';
+  updateSelectedFoods();  
 }
 
 function updateSelectedFoods() {
   const selectedDiv = document.getElementById("selectedFoods");
-  selectedDiv.innerHTML = '';
+  selectedDiv.innerHTML = '';  // 선택된 음식 리스트 비우기
   let total = 0;
 
-  selectedFoods.forEach((food, index) => {
-    const item = foodData[food];
-    const cal = item.cal;
-    total += cal;
+  if (selectedFoods.length === 0) {
+    
+    document.getElementById("totalCalories").innerText = "총칼로리: 0kcal";
+  } else {
+    selectedFoods.forEach((food, index) => {
+      const item = foodData[food];  
+      if (item) {
+        const cal = item.cal; 
+        total += cal; 
 
-    const div = document.createElement("div");
-    div.className = "food-item";
-    div.innerHTML = `
-      ${food} (${cal}kcal)
-      <button class="btn" onclick="removeFood(${index})">빼기</button>
-    `;
-    selectedDiv.appendChild(div);
-  });
+        const div = document.createElement("div");
+        div.className = "food-item";
+        div.innerHTML = `
+          ${food} (${cal}kcal)
+          <button class="btn" onclick="removeFood(${index})">빼기</button>
+        `;
+        selectedDiv.appendChild(div);
+      }
+    });
 
-  document.getElementById("totalCalories").innerText = `총칼로리: ${total}kcal`;
+    document.getElementById("totalCalories").innerText = `총칼로리: ${total}kcal`;  
+  }
 }
+
 
 /*
 document.querySelector('.analyze-btn').addEventListener('click', () => {
@@ -167,8 +176,10 @@ function getVitaminAnalysis(selectedFoods) {
 //결과 출력
 document.querySelector('.analyze-btn').addEventListener('click', () => {
   const analysisSection = document.getElementById('analysisSection');
-  analysisSection.style.display = 
-    (analysisSection.style.display === 'block') ? 'none' : 'block';
+  const chartSection = document.getElementById('vitaminChartSection');
+
+  analysisSection.style.display = 'block';
+  chartSection.style.display = 'flex'; // 차트도 보이게
 
   const nutrients = calculateNutrients(selectedFoods);
   const nutritionMsg = getNutritionAnalysis(nutrients);
@@ -176,8 +187,13 @@ document.querySelector('.analyze-btn').addEventListener('click', () => {
   const vitaminMsg = getVitaminAnalysis(selectedFoods);
 
   analysisSection.querySelector('p').innerText = 
-  `[칼로리 분석]\n${calMsg}\n\n[영양소 분석]\n${nutritionMsg}\n[비타민 분석]\n${vitaminMsg}`;
+    `[칼로리 분석]\n${calMsg}\n\n[영양소 분석]\n${nutritionMsg}\n[비타민 분석]\n${vitaminMsg}`;
+
+  // 차트도 바로 그려줌
+  drawMacroChart();
+  drawVitaminChart();
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

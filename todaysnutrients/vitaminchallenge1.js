@@ -1,16 +1,3 @@
-document.getElementById("challengeBtn").addEventListener("click", function () {
-    const chartSection = document.getElementById("vitaminChartSection");
-  
-    // 이미 보여지고 있으면 다시 숨김
-    if (chartSection.style.display === "none") {
-      chartSection.style.display = "flex"; 
-      drawMacroChart(); 
-      drawVitaminChart();
-    } else {
-      chartSection.style.display = "none"; 
-    }
-});
-  
 let chartInstance = null; 
 let vitaminChartInstance = null; 
 
@@ -55,10 +42,10 @@ function drawMacroChart() {
                 {
                     label: '내 섭취 비율',
                     data: [carbsRatio, proteinRatio, fatRatio],
-                    backgroundColor: '#2ecc71',
-                    borderColor: 'rgb(124, 231, 133)',
+                    backgroundColor:'rgb(103, 255, 191)',
+                    borderColor: 'rgb(103, 255, 191)',
                     borderWidth: 2,
-                    pointBackgroundColor: 'rgb(124, 231, 133)'
+                    pointBackgroundColor: 'rgb(103, 255, 191)'
                 }
             ]
         },
@@ -136,10 +123,10 @@ function drawVitaminChart() {
         {
           label: '내 섭취 비율',
           data: vitaminRatios,
-          backgroundColor: '#2ecc71',
-          borderColor: 'rgb(124, 231, 133)',
+          backgroundColor: '#3498db',
+          borderColor: '#3498db',
           borderWidth: 2,
-          pointBackgroundColor: 'rgb(124, 231, 133)'
+          pointBackgroundColor: '#3498db'
         }
       ]
     },
@@ -186,13 +173,11 @@ function calculateVitamins(selectedFoods) {
   return totalVitamins;
 }
 
-const btn = document.getElementById("challengeBtn");
-if (chartSection.style.display === "none") {
-  chartSection.style.display = "flex"; 
-  drawMacroChart(); 
+// 분석하기 버튼 클릭 시 차트 자동 표시 및 생성
+document.getElementById("analyzeBtn").addEventListener("click", function () {
+  const chartSection = document.getElementById("vitaminChartSection");
+  
+  chartSection.style.display = "flex";  // 항상 보이게
+  drawMacroChart();
   drawVitaminChart();
-  btn.innerText = "비타민 차트 숨기기";
-} else {
-  chartSection.style.display = "none"; 
-  btn.innerText = "비타민 차트 보기";
-}
+});

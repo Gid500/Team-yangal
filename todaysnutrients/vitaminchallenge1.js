@@ -3,25 +3,26 @@ document.getElementById("challengeBtn").addEventListener("click", function () {
   
     // 이미 보여지고 있으면 다시 숨김
     if (chartSection.style.display === "none") {
-      chartSection.style.display = "flex"; // flex로 다시 보이게
-      drawMacroChart(); // 차트 그리기
+      chartSection.style.display = "flex"; 
+      drawMacroChart(); 
       drawVitaminChart();
     } else {
-      chartSection.style.display = "none"; // 다시 숨김
+      chartSection.style.display = "none"; 
     }
 });
   
-let chartInstance = null; // 기존 차트 제거를 위한 전역 변수
-let vitaminChartInstance = null; // 기존 차트 제거를 위한 전역 변수
+let chartInstance = null; 
+let vitaminChartInstance = null; 
 
 function drawMacroChart() {
     const ctx = document.getElementById('macroChart').getContext('2d');
 
     const nutrients = calculateNutrients(selectedFoods);
     const totalMacro = nutrients.carbs + nutrients.protein + nutrients.fat;
-  
+
+    // 아무것도 선택되지 않은 경우
     if (totalMacro === 0) {
-      // 아무것도 선택되지 않은 경우
+      
       if (chartInstance) chartInstance.destroy();
       return;
     }
@@ -30,10 +31,10 @@ function drawMacroChart() {
     const proteinRatio = (nutrients.protein / totalMacro * 100).toFixed(1);
     const fatRatio = (nutrients.fat / totalMacro * 100).toFixed(1);
 
-    // 권장 섭취 비율 (고정값)
-    const recommendedRatios = [50, 30, 20]; // 탄수화물, 단백질, 지방 순서
+    // 권장 섭취 비율(고정)
+    const recommendedRatios = [50, 30, 20]; 
 
-    // 기존 차트가 있다면 제거
+    //차트 초기화
     if (chartInstance) {
         chartInstance.destroy();
     }

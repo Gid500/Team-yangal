@@ -147,9 +147,8 @@ function searchFood() {
 }
 
 document.getElementById("searchInput").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {  // Enter 키가 눌리면
-    searchFood();  // 검색 함수 실행
-  }
+  if (event.key === "Enter") {  
+    searchFood();  
 });
 
 function addFood(food) {
@@ -197,6 +196,7 @@ document.querySelector('.analyze-btn').addEventListener('click', () => {
   document.getElementById('analysisSection').style.display = 'block';
 });
 */
+
 //칼로리 분석
 function getAnalysisResult(totalCalories) {
   if (totalCalories === 0) {
@@ -209,8 +209,6 @@ function getAnalysisResult(totalCalories) {
     return "칼로리 과다 섭취입니다! 식단 조절이 필요해요.";
   }
 }
-
-
 
 //영양소분석
 function calculateNutrients(selectedFoods) {

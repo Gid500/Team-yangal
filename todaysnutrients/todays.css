@@ -10,7 +10,6 @@ body {
     margin-top: -40px; 
     padding: 40px;
     flex-grow: 1;
-  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,9 +42,9 @@ body {
 }
   
 .search-btn {
-    color:#2c2a2b;
+    color:white;
     border-radius: 30%;
-    background-color: rgb(255, 207, 14);
+    background-color: #2ecc71;
     border: none;
     font-size: 22px;
     padding: 5px;
@@ -53,7 +52,7 @@ body {
 }
   
 .search-btn:hover{
-    color:#1acf38;
+    color:#ccc;
 }
 
 .container {
@@ -65,8 +64,17 @@ body {
 .box {
     border: 1px solid #ccc;
     padding: 24px;
+    width: 1060px;
+    min-height: 600px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.box1{
+    border: 1px solid #ccc;
+    padding: 24px;
     width: 530px;
-    min-height: 400px;
+    min-height: 500px;
     border-radius: 10px;
     background-color: #f9f9f9;
 }
@@ -127,18 +135,16 @@ body {
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #1acf38;
-    color: black;
+    background-color: #2ecc71;
+    color: white;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 0.7rem;
 }
 
-
-.analyze-btn:hover {
+.analyze-btn:hover{
     background-color: #ddd;
 }
-  
+
 .challenge-section {
     display: flex;
     justify-content: center;
@@ -156,14 +162,13 @@ body {
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #ffc30e; /* 다른 색상으로 구분 */
-    color: black;
+    background-color: #2ecc71; 
+    color: white;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 0.7rem;
 }
 
-#challengeBtn:hover {
+#challengeBtn:hover{
     background-color: #ddd;
 }
 
@@ -172,11 +177,10 @@ body {
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #ff4943; /* 다른 색상으로 구분 */
-    color: black;
+    background-color: #2ecc71;
+    color: white;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 0.7rem;
 }
 
 #market-btn:hover{

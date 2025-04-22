@@ -78,7 +78,7 @@
       </div>
       <div class="container">
         <!-- 음식 검색 결과 -->
-        <div class="box" id="searchResults" style="overflow:auto; height:200px;">
+        <div class="box1" id="searchResults" style="overflow:auto; height:200px;">
           <div class="title-bar">
             <h2>음식 리스트</h2>
             <button onclick="resetFoods()">초기화</button>
@@ -86,7 +86,7 @@
           <div id="foodList"></div>
         </div>
         <!-- 선택된 음식 -->
-        <div class="box" style="overflow:auto; height:200px;">
+        <div class="box1" style="overflow:auto; height:200px;">
           <h2>선택된 음식</h2>
           <div id="selectedFoods"></div>
           <div class="total" id="totalCalories">총칼로리: 0kcal</div>
@@ -99,20 +99,24 @@
           <div class="box">
             <h4>분석 결과</h4>
             <p style="font-size:20px;"></p>
+            
+            <div class="challenge-section">
+              <button id="challengeBtn">비타민 챌린지</button>
+            </div>
+            
+            <div class="vitamin-chart-section" id="vitaminChartSection" style="display: none;">
+              <div class="box1">
+                <canvas id="macroChart" width="400" height="400"></canvas>
+              </div>
+              <div class="box1">
+                <canvas id="vitaminChart" width="400" height="400"></canvas>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="challenge-section">
-          <button id="challengeBtn">비타민 챌린지</button>
-        </div>
+          </div>
+          
         <!-- 챌린지버튼 누르면 나오는 섹션 -->
-        <div class="vitamin-chart-section" id="vitaminChartSection" style="display: none;">
-          <div class="box">
-            <canvas id="macroChart" width="400" height="400"></canvas>
-          </div>
-          <div class="box">
-            <canvas id="vitaminChart" width="400" height="400"></canvas>
-          </div>
-        </div>
+       
 
         <button id="market-btn" onclick="location.href='../market/market.html'">Go Market!</button>
       </div>
@@ -135,6 +139,7 @@
   </div>
   <script src="../main/togglesidebar.js"></script>
   <script src="../main/commonloginlogout.js"></script>
+  <script src="food.js"></script>
   <script src="todays.js"></script>
   <Script src="vitaminchallenge1.js"></Script>
 </body>

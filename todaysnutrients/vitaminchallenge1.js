@@ -55,10 +55,10 @@ function drawMacroChart() {
                 {
                     label: '내 섭취 비율',
                     data: [carbsRatio, proteinRatio, fatRatio],
-                    backgroundColor: 'rgba(255, 207, 14, 0.2)',
-                    borderColor: '#ffc30e',
+                    backgroundColor: '#2ecc71',
+                    borderColor: 'rgb(124, 231, 133)',
                     borderWidth: 2,
-                    pointBackgroundColor: '#ffc30e'
+                    pointBackgroundColor: 'rgb(124, 231, 133)'
                 }
             ]
         },
@@ -74,12 +74,12 @@ function drawMacroChart() {
                     suggestedMin: 0,
                     suggestedMax: 100,
                     ticks: {
-                        stepSize: 20,
+                        stepSize: 50,
                         color: '#333'
                     },
                     pointLabels: {
                         font: {
-                        size: 14
+                        size: 18
                         }
                     }
                 }
@@ -136,10 +136,10 @@ function drawVitaminChart() {
         {
           label: '내 섭취 비율',
           data: vitaminRatios,
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255, 99, 132, 1)',
+          backgroundColor: '#2ecc71',
+          borderColor: 'rgb(124, 231, 133)',
           borderWidth: 2,
-          pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+          pointBackgroundColor: 'rgb(124, 231, 133)'
         }
       ]
     },
@@ -155,12 +155,12 @@ function drawVitaminChart() {
               suggestedMin: 0,
               suggestedMax: 100,
               ticks: {
-                  stepSize: 20,
+                  stepSize: 50,
                   color: '#333'
               },
               pointLabels: {
                   font: {
-                  size: 14
+                  size: 18
                   }
               }
           }
@@ -184,4 +184,15 @@ function calculateVitamins(selectedFoods) {
     }
   });
   return totalVitamins;
+}
+
+const btn = document.getElementById("challengeBtn");
+if (chartSection.style.display === "none") {
+  chartSection.style.display = "flex"; 
+  drawMacroChart(); 
+  drawVitaminChart();
+  btn.innerText = "비타민 차트 숨기기";
+} else {
+  chartSection.style.display = "none"; 
+  btn.innerText = "비타민 차트 보기";
 }

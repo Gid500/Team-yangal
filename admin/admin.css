@@ -171,10 +171,17 @@ canvas{
     border: 1px solid grey;
     width: 300px;
 }
-.main-item5 .order-list{
+
+.main-item5 #board-mangement{
     border: 1px solid grey;
     width: 400px;
 }
+
+#board-mangement tbody td{
+    text-align: center;
+    border-left: solid 1px;
+}
+
 .main-item6 .order-list{
     border: 1px solid grey;
     width: 400px;

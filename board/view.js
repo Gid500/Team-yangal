@@ -44,52 +44,52 @@ removeBtn.addEventListener('click', function() {
     location.replace('list.html');
 });
 
-const commentList = 'commentList';
+// const commentList = 'commentList';
 
-const postComent = document.querySelector(".main .view-container");
+// const postComent = document.querySelector(".main .view-container");
 
-document
-.getElementById('coment-form')
-.addEventListener("submit", function (event) {
-    event.preventDefault();
+// document
+// .getElementById('coment-form')
+// .addEventListener("submit", function (event) {
+//     event.preventDefault();
 
-    const commentContent = document.getElementById('comment-content').value;
+//     const commentContent = document.getElementById('comment-content').value;
 
-    const userid = JSON.parse(localStorage.getItem('user'));
-    const pDate = new Date();
-    const year = pDate.getFullYear();
-    const month = pDate.getMonth()+1;
-    const day = pDate.getDate();
+//     const userid = JSON.parse(localStorage.getItem('user'));
+//     const pDate = new Date();
+//     const year = pDate.getFullYear();
+//     const month = pDate.getMonth()+1;
+//     const day = pDate.getDate();
 
-    const lists = JSON.parse(localStorage.getItem(commentList));
-    if (!lists) {
-        const objArr = [];
-        objArr.push({
-            content: commentContent,
-            writer: `${userid.name}`,
-            Date: `${year}.${month}.${day}`
-        });
-     localStorage.setItem(commentList, JSON.stringify(objArr));
-    } else {
-        lists.push({
-            content: commentContent,
-            writer: `${userid.name}`,
-            Date: `${year}.${month}.${day}`
-        });
-     localStorage.setItem(commentList, JSON.stringify(lists));
-    } 
-    location.replace('list.html');
-})
+//     const lists = JSON.parse(localStorage.getItem(commentList));
+//     if (!lists) {
+//         const objArr = [];
+//         objArr.push({
+//             content: commentContent,
+//             writer: `${userid.name}`,
+//             Date: `${year}.${month}.${day}`
+//         });
+//      localStorage.setItem(commentList, JSON.stringify(objArr));
+//     } else {
+//         lists.push({
+//             content: commentContent,
+//             writer: `${userid.name}`,
+//             Date: `${year}.${month}.${day}`
+//         });
+//      localStorage.setItem(commentList, JSON.stringify(lists));
+//     } 
+//     location.replace('list.html');
+// })
 
-function template2(post, index){
-    return `
-    <div class="coment">
-        <div>
-            <span>작성자 : </span><span>${comment.writer}</span><span>작성일 : </span><span>${comment.Date}</span>
-            <div id="coment-content">
-                <p>${comment.content}</p>
-            </div>
-        </div>
-    </div>
-` 
-}
+// function template2(post, index){
+//     return `
+//     <div class="coment">
+//         <div>
+//             <span>작성자 : </span><span>${comment.writer}</span><span>작성일 : </span><span>${comment.Date}</span>
+//             <div id="coment-content">
+//                 <p>${comment.content}</p>
+//             </div>
+//         </div>
+//     </div>
+// ` 
+// }

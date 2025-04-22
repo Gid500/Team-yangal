@@ -149,6 +149,7 @@ function searchFood() {
 document.getElementById("searchInput").addEventListener("keypress", function(event) {
   if (event.key === "Enter") {  
     searchFood();  
+  }
 });
 
 function addFood(food) {

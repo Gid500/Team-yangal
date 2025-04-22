@@ -68,7 +68,6 @@
     cursor: pointer;
     border-radius: 4px;
     height: 36px;
-    transition: color 0.3s ease;
   }
   .login-btn:hover {
     color: #6fcf97;
@@ -110,6 +109,22 @@
     text-align: center;
     background-color: rgb(163, 156, 156);
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .confirm-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf2e3;
+    color: black;
+    text-decoration: none;
+    border: none;
+    font-size: small;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 36px;
   }
   /* 가로로 정렬되는 입력+버튼 묶음 */
   .row-group {

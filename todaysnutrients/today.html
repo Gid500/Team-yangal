@@ -9,8 +9,13 @@
   <link rel="stylesheet" href="../main/footer.css">
   <link rel="stylesheet" href="todays.css">
 </head>
+  <style>
+    body.hidden {
+      display: none;
+    }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<body>
+<body class="hidden">
   <div class="wrapper">
     <div class="header">
       <div class="header-left">
@@ -73,7 +78,7 @@
       </div>
       <div class="container">
         <!-- 음식 검색 결과 -->
-        <div class="box" id="searchResults">
+        <div class="box" id="searchResults" style="overflow:auto; height:200px;">
           <div class="title-bar">
             <h2>음식 리스트</h2>
             <button onclick="resetFoods()">초기화</button>
@@ -81,7 +86,7 @@
           <div id="foodList"></div>
         </div>
         <!-- 선택된 음식 -->
-        <div class="box">
+        <div class="box" style="overflow:auto; height:200px;">
           <h2>선택된 음식</h2>
           <div id="selectedFoods"></div>
           <div class="total" id="totalCalories">총칼로리: 0kcal</div>

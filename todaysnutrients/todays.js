@@ -315,4 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("로그인 후 이용하실 수 있습니다.");
       window.location.href = "../login/login.html"; // 로그인 페이지로 이동
   }
+  else {
+    document.body.classList.remove("hidden"); // 로그인 상태면 body 보여주기
+  }
 });

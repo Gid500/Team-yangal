@@ -6,10 +6,10 @@
   <title>ID 찾기</title>
   <link rel="stylesheet" href="findid.css">
   <link rel="stylesheet" href="sidemenu.css">
-  <link rel="stylesheet" href="popup.css">
+
 </head>
 <body>
-  <form class="login-form" id="signup-form">
+  <form class="login-form">
     <div class="input-wrapper">
       <div class="logo"><a href="../main/main.html">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a></div>
       <fieldset class="login-line">
@@ -31,8 +31,10 @@
         <button id="submit-btn" class="login-btn" onclick="showResult()">아이디 찾기</button>
 
         <div id="popup" class="popup">
+          <div class="popup-content">
           <p id="popupText"></p>
           <button onclick="closePopup()">닫기</button>
+          </div>
         </div>
 
         <div class="flex-row" style="margin-top: 16px;">

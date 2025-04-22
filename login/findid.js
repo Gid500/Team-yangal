@@ -21,13 +21,14 @@ function verifyCode() {
       alert("인증이 완료되었습니다.");
       codeVerified = true;
       document.getElementById("submit-btn").disabled = false;
+      showResult();
   } else {
       alert("인증번호가 일치하지 않습니다.");
       codeVerified = false;
       document.getElementById("submit-btn").disabled = true;
+      showResult();
   }
 }
-
 
 function showResult() {
   const birth = document.getElementById("birth").value;
@@ -37,9 +38,7 @@ function showResult() {
     alert("모든 정보를 정확히 입력해주세요.");
     return;
   }
-
   let foundId = null;
-
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
     try {
@@ -57,20 +56,17 @@ function showResult() {
       // JSON 파싱 오류 무시
     }
   }
-
   const popup = document.getElementById("popup");
   const text = document.getElementById("popupText");
-
+  
   if (foundId) {
     text.innerText = `아이디는 ${foundId} 입니다.`;
   } else {
     text.innerText = "입력하신 정보와 일치하는 회원이 없습니다.";
   }
-
-  document.getElementById("popup").style.display = "block";
+  popup.classList.add("active");
 }
 
 function closePopup() {
-  document.getElementById("popup").style.display = "none";
+  document.getElementById("popup").classList.remove("active");
 }
-

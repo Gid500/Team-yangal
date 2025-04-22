@@ -29,7 +29,7 @@
 #calendar {
     min-height: 500px;
     background-color: white;
-    padding: 20px; /* 👈 여유 공간 확보용 */
+    padding: 20px; 
     border-radius: 8px;
 }
   
@@ -86,7 +86,6 @@
     font-size:20px;
     padding: 10px 20px;
     border-radius: 6px;
-    transition: background-color 0.2s;
   }
   
 .menu-section a:hover {

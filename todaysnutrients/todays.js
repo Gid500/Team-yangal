@@ -317,6 +317,3 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../login/login.html"; // 로그인 페이지로 이동
   }
 });
-
-
-

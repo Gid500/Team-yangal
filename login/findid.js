@@ -1,20 +1,33 @@
+let generatedCode = null;
+let codeVerified = false;
+
 function sendVerification() {
   const phone = document.getElementById("phone").value;
-  if (!phone || phone.length < 10) {
-    alert("휴대폰 번호를 정확히 입력하세요.");
+
+  if (!phone.match(/^\d{10,11}$/)) {
+    alert("올바른 휴대폰 번호를 입력하세요.");
     return;
   }
-  alert("인증번호가 전송되었습니다.");
+
+  generatedCode = Math.floor(100000 + Math.random() * 900000).toString();
+  alert(`인증번호: ${generatedCode}`);
 }
 
+// 인증번호 확인
 function verifyCode() {
-  const code = document.getElementById("code").value;
-  if (!code) {
-    alert("인증번호를 입력해주세요.");
-    return;
+  const codeInput = document.getElementById("code").value;
+
+  if (codeInput === generatedCode) {
+      alert("인증이 완료되었습니다.");
+      codeVerified = true;
+      document.getElementById("submit-btn").disabled = false;
+  } else {
+      alert("인증번호가 일치하지 않습니다.");
+      codeVerified = false;
+      document.getElementById("submit-btn").disabled = true;
   }
-  alert("인증 완료되었습니다.");
 }
+
 
 function showResult() {
   const birth = document.getElementById("birth").value;
@@ -25,12 +38,39 @@ function showResult() {
     return;
   }
 
+  let foundId = null;
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    try {
+      const user = JSON.parse(localStorage.getItem(key));
+      if (
+        user &&
+        user.type === "user" &&
+        user.birth === birth &&
+        user.phone === phone
+      ) {
+        foundId = user.username;
+        break;
+      }
+    } catch (e) {
+      // JSON 파싱 오류 무시
+    }
+  }
+
   const popup = document.getElementById("popup");
   const text = document.getElementById("popupText");
-  text.innerText = `아이디는 ${vitantan_user01} 입니다.`;
-  popup.classList.add("active");
+
+  if (foundId) {
+    text.innerText = `아이디는 ${foundId} 입니다.`;
+  } else {
+    text.innerText = "입력하신 정보와 일치하는 회원이 없습니다.";
+  }
+
+  document.getElementById("popup").style.display = "block";
 }
 
 function closePopup() {
-  document.getElementById("popup").classList.remove("active");
+  document.getElementById("popup").style.display = "none";
 }
+

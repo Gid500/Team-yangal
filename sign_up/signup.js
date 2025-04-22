@@ -42,7 +42,9 @@ document.getElementById("signup-form").addEventListener("submit", function (even
     const newid = document.getElementById("newid").value;
     const newpw = document.getElementById("newpw").value;
     const verifypw = document.getElementById("verifypw").value;
-
+    const phone = document.getElementById("phone").value;
+    const birth = document.getElementById("birth").value;
+    
     if (newpw !== verifypw) {
         alert("비밀번호가 일치하지 않습니다.");
         return;
@@ -53,6 +55,8 @@ document.getElementById("signup-form").addEventListener("submit", function (even
         name: name,
         username: newid,
         password: newpw,
+        phone: phone,       
+        birth: birth        
     };
 
     localStorage.setItem(newid, JSON.stringify(user));

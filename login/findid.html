@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <form class="login-form" id="signup-form">
+  <form class="login-form" id="findid-form">
     <div class="input-wrapper">
       <div class="logo"><a href="../main/main.html">VIT<font color="FFC456">A</font>NT<font color="FFC456">A</font>N</a></div>
       <fieldset class="login-line">
@@ -28,7 +28,12 @@
           <button type="button" class="login-btn" onclick="verifyCode()">인증번호 조회</button>
         </div>
 
-        <button type="submit" class="login-btn" onclick="showResult()">완료</button>
+        <button id="submit-btn" class="login-btn" onclick="showResult()" disabled>아이디 찾기</button>
+
+        <div id="popup" style="display: none;">
+          <p id="popupText"></p>
+          <button onclick="closePopup()">닫기</button>
+        </div>
 
         <div class="flex-row" style="margin-top: 16px;">
           <a href="login.html">로그인 화면으로 돌아가기</a>

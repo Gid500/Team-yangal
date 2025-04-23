@@ -11,7 +11,6 @@ if(post === null){
 const tbody = document.querySelector("tbody");
 
 function template(post, index){
-    index = index + 1;
     return `
     <tr>
         <td>${index}</td>

@@ -5,7 +5,7 @@ const idx = location.search;
 const index = idx.split("=")[1];
 const post = postOBJ[index];
 
-const postcontent = document.querySelector(".wrapper .view-container");
+const postcontent = document.querySelector(".main .view-container");
 
 function viewCount() {
     post.view++;

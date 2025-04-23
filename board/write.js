@@ -1,6 +1,5 @@
 const post = 'post';
 let views = 0;
-let pNo = 0;
 
 document
 .getElementById('write-form')
@@ -20,7 +19,7 @@ document
     if (!lists) {
         const objArr = [];
         objArr.push({
-            no: `${pNo}`,
+            no: '0',
             title: writetitle,
             content: content,
             writer: `${userid.name}`,
@@ -30,7 +29,7 @@ document
      localStorage.setItem(post, JSON.stringify(objArr));
     } else {
         lists.push({
-            no: `${pNo}`,
+            no: `0`,
             title: writetitle,
             content: content,
             writer: `${userid.name}`,

@@ -1,3 +1,6 @@
+//로컬스토리지에 저장된 게시글 리스트(post)를 불러와서 
+//게시판 테이블에 출력하고, 게시글을 삭제하는 기능
+
 let post = localStorage.getItem("post");
 
 if(post === null){

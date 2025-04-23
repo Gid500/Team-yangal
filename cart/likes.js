@@ -1,5 +1,7 @@
 // likes.js
 
+//로컬스토리지에 저장된 찜(wishlist) 상품 목록을 웹 페이지에 렌더링
+//사용자가 삭제하거나 구매 버튼을 누를 수 있게 처리하는 기능
 document.addEventListener("DOMContentLoaded", () => {
     const removeBtns = document.querySelectorAll(".remove-btn");
     const buyBtns = document.querySelectorAll(".buy-btn");

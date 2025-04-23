@@ -1,3 +1,8 @@
+//선택한 음식 데이터를 기반으로 
+// 영양소 비율 차트와 비타민 섭취 비율 차트를 
+// Chart.js의 Radar Chart 형태로 그리는 기능
+
+
 let chartInstance = null; 
 let vitaminChartInstance = null; 
 

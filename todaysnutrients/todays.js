@@ -49,6 +49,7 @@ function updateSelectedFoods() {
 
   if (selectedFoods.length === 0) {
     document.getElementById("totalCalories").innerText = `총칼로리: ${total}kcal`;
+    
   } else {
     selectedFoods.forEach((food, index) => {
       const item = foodData[food];  

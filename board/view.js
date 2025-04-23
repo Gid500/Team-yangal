@@ -27,8 +27,8 @@ function template(){
         </div>
         <div id="view-content">${post.content}
         </div>
-    </div>  
-` 
+    </div>
+`
 }
 
 postcontent.innerHTML += template();

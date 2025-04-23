@@ -39,6 +39,8 @@ function resetFoods() {
   document.getElementById("selectedFoods").innerHTML = '';
   document.getElementById("foodList").innerHTML = '';
   document.getElementById("searchInput").value = '';
+  const analysisSection = document.getElementById('analysisSection');
+  analysisSection.style.display = "none";
   updateSelectedFoods();  
 }
 

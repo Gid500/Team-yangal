@@ -39,8 +39,7 @@ function resetFoods() {
   document.getElementById("selectedFoods").innerHTML = '';
   document.getElementById("foodList").innerHTML = '';
   document.getElementById("searchInput").value = '';
-  document.getElementById("analysisResult").innerText = '';
-  updateSelectedFoods();  
+  updateSelectedFoods();
 }
 
 function updateSelectedFoods() {
@@ -49,8 +48,8 @@ function updateSelectedFoods() {
   let total = 0;
 
   if (selectedFoods.length === 0) {
+    document.getElementById("totalCalories").innerText = `총칼로리: ${total}kcal`;
     
-    document.getElementById("totalCalories").innerText = "총칼로리: 0kcal";
   } else {
     selectedFoods.forEach((food, index) => {
       const item = foodData[food];  

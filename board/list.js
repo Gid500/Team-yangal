@@ -1,4 +1,5 @@
-let post = localStorage.getItem("post");
+const post = localStorage.getItem("post");
+const boards = JSON.parse(post);
 
 if(post === null){
     const intialState = []
@@ -10,9 +11,10 @@ if(post === null){
 const tbody = document.querySelector("tbody");
 
 function template(post, index){
+    index = index + 1;
     return `
     <tr>
-        <td>${post.no = index + 1}</td>
+        <td>${index}</td>
         <td><a href="view.html?index=${index}">${post.title}</a></td>
         <td><a href="view.html?index=${index}">${post.content}</a></td>
         <td>${post.writer}</td>
@@ -22,7 +24,6 @@ function template(post, index){
 `
 }
 
-const boards = JSON.parse(post);
 
 for(let i = boards.length - 1 ; i > -1 ; i--){
     tbody.innerHTML += template(boards[i],i);

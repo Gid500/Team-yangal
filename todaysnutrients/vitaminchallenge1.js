@@ -174,7 +174,7 @@ function calculateVitamins(selectedFoods) {
 }
 
 // 분석하기 버튼 클릭 시 차트 자동 표시 및 생성
-document.getElementById("analyzeBtn").addEventListener("click", function () {
+document.getElementById("analyze-btn").addEventListener("click", function () {
   const chartSection = document.getElementById("vitaminChartSection");
   
   chartSection.style.display = "flex";  // 항상 보이게

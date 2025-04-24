@@ -1,3 +1,4 @@
+//main.js
 // 배너
 const slides = document.querySelector('.slides');
 const dots = document.querySelectorAll('.dot');

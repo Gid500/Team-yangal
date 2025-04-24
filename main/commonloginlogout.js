@@ -1,3 +1,5 @@
+//commonloginlogout
+
 document.addEventListener("DOMContentLoaded", function () {
   const userInfo = document.getElementById("userInfo");
   const userName = document.getElementById("userName");

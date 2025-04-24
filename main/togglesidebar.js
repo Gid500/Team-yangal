@@ -1,3 +1,5 @@
+//togglesidebar.js
+
 document.addEventListener('DOMContentLoaded', function () {
   const currentPath = window.location.pathname;
   const menuLinks = document.querySelectorAll('.nav-menu a');
@@ -13,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-
 
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");

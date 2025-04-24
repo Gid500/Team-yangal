@@ -1,10 +1,3 @@
-function closeSidebar() {
-  document.getElementById("sidebar").classList.remove("active");
-  document.getElementById("overlay").classList.remove("active");
-  document.getElementById("menuBtn").style.display = "block";
-}
-
-
 const vitamins = {
   "지용성 비타민": {
     desc: "지용성 비타민은 지방에 녹아 체내에 저장되며, 과다 섭취 시 부작용이 발생할 수 있습니다.",

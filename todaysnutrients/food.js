@@ -22,7 +22,7 @@ const foodData = {
     '떡볶이(1인분)': { 
       cal: 450, carbs: 85, protein: 8, fat: 10, 
       vitA: 0, vitB1: 0, vitB2: 0, vitC: 1, vitD: 0, vitE: 0 
-    },
+    },     
     '라면': { 
       cal: 500, carbs: 72, protein: 10, fat: 18, 
       vitA: 0, vitB1: 0, vitB2: 0, vitC: 0, vitD: 0, vitE: 0 
